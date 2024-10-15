@@ -1,0 +1,13 @@
+⚫●◽★
+——————————————————————
+VS
+代码格式化：shift + alt +F
+搜索：ctrl + T
+——————————————————————
+Pycharm
+ctrl+alt+M:抽取代码
+ctrl+shift+R:全局替换
+Shift + F6  方法或变量重命名
+
+
+https://cloud.tencent.com/developer/article/1739012

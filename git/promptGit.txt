@@ -1,0 +1,69 @@
+⚫●◽★
+——————————————————————
+⚫设置用户
+git config --global user.name "[用户名]"
+git config --global user.email "[邮箱]"
+cat ~/.gitconfig // 查看用户
+-
+git config --global user.name "文家宝"
+git config --global user.email "wenjiabao@dobest.com"
+⚫获取 Git 仓库
+git init
+git clone [url] // 服务器克隆现有 Git 仓库
+git remote -v // 查看远程仓库的名字
+git clone [url] [directoryname] // 自定义本地仓库的名字
+⚫更新
+git status // 检测当前文件状态
+git add [filename] // 添加暂存区
+git add * // 所有文件，忽略项设置为.gitignore 文件
+git add [*.txt] // 通配文件
+git commit -m "[代码提交信息]" // 提交工作目录，提交前用 git status 看下是否添加暂存区
+git commit -a -m "[代码提交信息]"  // 添加并提交
+git rm [filename] // 从暂存区域移除
+git rm -r [venv] // 从暂存区域移除文件夹
+git mv [filename] [newname] // 暂存区文件重命名
+⚫推送改动到远程仓库
+git remote add origin [.git] // 将你的仓库连接到某个远程服务器
+git push origin [master] // 将你的改动推送到所添加的服务器
+⚫远程仓库的移除与重命名
+git remote rename [directoryname] [newname] // 重命名远程仓库
+git remote rm [newname] // 移除远程仓库 
+⚫查看提交历史
+git log // 列出所有的更新
+git log --author=[name] // 列出用户的更新
+⚫撤消
+git commit --amend // 重新提交
+git reset [filename] // 取消暂存的文件
+git checkout -- [filename] // 撤消对文件的修改
+⚫分支
+git branch [test] // 创建分支
+git checkout [test] // 切换分支
+git checkout -b [test] // 创建并切换分支
+git merge [test] // 合并分支
+git branch -d [test] // 删除分支
+git push origin [test]// 推送分支，无[test]则默认master
+⚫其他
+touch [file] // 修改file的时间属性，如果file不存在，则将创建一个新的空白文件
+git push -u origin master // 指定一个默认主机，如果当前分支与多个主机存在追踪关系
+git push -u origin --all // 推送分支，不管是否存在对应的远程分支
+git push -u origin --tags // 推送分支和标签
+——————————————————————
+cd
+git init
+git clone git@code.dobest.com:sanguosha-mobile/server/tools/TscanCodeX.git
+cd D:\\CppWorkplace\\TscanCodeX\\TscanCodeX
+git add *
+git commit -m "[代码提交信息]"
+git push -u origin master
+——————————————————————
+cd D:\\MiniGameWorkplace\\TribalCouncil
+git clone git@github.com:github991127/egClass.git
+
+cd Fonts
+git add *
+git commit -m "up doc"
+git push -u origin main
+git push origin
+
+LatexTemplate
+PyTools
