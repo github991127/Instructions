@@ -1,13 +1,25 @@
 ⚫●◽★
 ——————————————————————
-VS
-代码格式化：shift + alt +F
-搜索：ctrl + T
+●VS
+S F12:查找所有引用
+AS F:代码格式化
+C T:搜索
+●VassistX
+AG:定义和声明跳转
+https://blog.csdn.net/u014779536/article/details/115498327
 ——————————————————————
-Pycharm
-ctrl+alt+M:抽取代码
-ctrl+shift+R:全局替换
-Shift + F6  方法或变量重命名
-
-
+Jet
+AC M:抽取代码
+CS R:全局替换
+S F6:方法或变量重命名
 https://cloud.tencent.com/developer/article/1739012
+
+
+
+
+
+
+
+
+
+
