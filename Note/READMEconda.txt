@@ -1,5 +1,7 @@
 ⚫●◽★
 ——————————————————————
+
+conda activate py307
 ⚫env
 ●C
 conda create -n [name] python=3.7
