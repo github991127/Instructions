@@ -5,21 +5,49 @@ S F12:查找所有引用
 AS F:代码格式化
 C T:搜索
 ●VassistX
+AS R:批量重命名
 AG:定义和声明跳转
 https://blog.csdn.net/u014779536/article/details/115498327
 ——————————————————————
 Jet
-AC M:抽取代码
-CS R:全局替换
-S F6:方法或变量重命名
 https://cloud.tencent.com/developer/article/1739012
-
-
-
-
-
-
-
-
-
-
+⚫检索修改
+●指定范围搜索
+ctrl+shift+F
+●查看继承树和UML图
+ctrl+H
+ctrl+alt+U
+●形参提醒★
+ctrl+P
+●注释
+ctrl+/
+ctrl+shift+/
+/**+enter
+●批量修改变量★
+shitf+f6
+●查看声明源头
+ctrl+alt+B
+●自动导包
+ctrl+alt+O
+●快速移动
+alt+shift+上
+alt+shift+下
+⚫快速生成
+●重写父类和实现接口
+ctrl+O
+ctrl+I
+●复制删除行
+ctrl+D
+ctrl+Y
+●变量返回值
+ctrl+alt+V
+●构造方法【默认方法】★
+alt+insert
+●代码包裹★
+ctrl+alt+T
+●代码转方法★ACM
+ctrl+alt+M
+●智能修改
+alt+enter
+●main函数★
+main+enter
