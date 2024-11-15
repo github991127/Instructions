@@ -1,5 +1,5 @@
 -Xms128m
--Xmx1024m
+-Xmx2048m
 -XX:ReservedCodeCacheSize=512m
 -XX:+IgnoreUnrecognizedVMOptions
 -XX:+UseG1GC
@@ -20,3 +20,4 @@
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
 
 -javaagent:D:\workplace\Instructions\IDE\jetbra\ja-netfilter.jar=jetbrains
+-Didea.suppressed.plugins.set.selector=radler
