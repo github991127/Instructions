@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>241122周报</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\wenjiabao\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: 'vivo Sans';
+  font-size: 18px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><html><head><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body></body></html>
+    </head>
+    <body for="html-export" >
+      <div class="crossnote markdown-preview  "  >
+      
+<ul>
+<li><a href="#1-%E5%BC%80%E5%8F%91%E4%BB%BB%E5%8A%A1%E5%AE%9E%E6%96%BD">1. 开发任务实施</a>
+<ul>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4">代码提交</a></li>
+<li><a href="#%E5%8D%8F%E4%BD%9C%E5%86%85%E5%AE%B9">协作内容</a>
+<ul>
+<li><a href="#%E6%B2%9F%E9%80%9A%E7%AD%96%E5%88%92">沟通策划</a></li>
+<li><a href="#%E6%B2%9F%E9%80%9A%E5%89%8D%E7%AB%AF">沟通前端</a></li>
+<li><a href="#%E6%B2%9F%E9%80%9A%E6%B5%8B%E8%AF%95">沟通测试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0">2. 项目实现学习</a>
+<ul>
+<li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E9%80%BB%E8%BE%91-%E7%89%8C">逻辑-牌</a>
+<ul>
+<li><a href="#%E9%80%89%E4%B8%AD%E7%89%8C%E4%BE%9D%E6%AC%A1%E5%85%A5%E6%A0%88">选中牌依次入栈</a></li>
+<li><a href="#%E9%80%89%E4%B8%AD%E9%9A%8F%E6%9C%BA%E7%89%8C%E6%8C%87%E5%AE%9A%E7%89%8C">选中随机牌，指定牌</a></li>
+<li><a href="#%E8%BD%AC%E5%8C%96%E7%89%8C">转化牌</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E6%89%A7%E8%A1%8C%E5%8F%82%E6%95%B0-%E8%BD%AC%E5%8C%96%E7%89%8C">设置执行参数-转化牌</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E7%89%8C-%E8%BD%AC%E5%8C%96%E7%89%8C">使用牌-转化牌</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%BB%E8%BE%91-%E8%A7%92%E8%89%B2">逻辑-角色</a>
+<ul>
+<li><a href="#%E7%AD%9B%E9%80%89%E5%8F%AF%E9%80%89%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%88%97%E8%A1%A8">筛选可选中目标列表</a></li>
+<li><a href="#%E9%87%8D%E6%96%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E5%88%97%E8%A1%A8">重新指定目标列表</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%BB%E8%BE%91-%E6%8A%80%E8%83%BD">逻辑-技能</a>
+<ul>
+<li><a href="#%E4%BC%A4%E5%AE%B3%E6%80%BB%E5%80%BC">伤害总值</a></li>
+<li><a href="#%E8%8B%A5%E4%BB%A5%E6%AD%A4%E6%B3%95">若以此法...</a></li>
+<li><a href="#%E8%8B%A5a%E5%88%99b%E9%9D%9E%E9%94%81%E5%AE%9A%E6%8A%80%E7%9A%84%E9%94%81%E5%AE%9A%E6%95%88%E6%9E%9C">若A则B，非锁定技的锁定效果</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%BD%93%E5%89%8D%E6%8A%80%E8%83%BD%E6%95%88%E6%9E%9C">设置当前技能效果</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E6%8A%80%E8%83%BD%E7%9B%AE%E6%A0%87">设置技能目标</a></li>
+<li><a href="#%E6%88%90%E5%8A%9F%E5%A4%B1%E8%B4%A5%E7%BB%91%E5%AE%9A%E5%87%BD%E6%95%B0">成功失败绑定函数</a></li>
+<li><a href="#netmsg-%E5%8F%96%E6%B6%88">netmsg-取消</a></li>
+<li><a href="#%E8%AF%B7%E6%B1%82client%E6%B6%88%E6%81%AF">请求client消息</a></li>
+<li><a href="#%E9%80%9A%E7%9F%A5%E7%BB%99client%E6%B6%88%E6%81%AF">通知给client消息</a></li>
+<li><a href="#%E9%9A%8F%E6%9C%BA%E6%95%B0">随机数</a></li>
+</ul>
+</li>
+<li><a href="#buff">buff</a>
+<ul>
+<li><a href="#%E6%9D%80%E6%97%A0%E8%A7%86%E6%AC%A1%E6%95%B0">杀无视次数</a></li>
+<li><a href="#%E6%8A%80%E8%83%BD%E7%8A%B6%E6%80%81%E4%BF%9D%E7%95%99">技能状态保留</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE-%E6%8A%80%E8%83%BD%E6%95%B0%E6%8D%AE">配置-技能数据</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-xml">配置-xml</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0">使用实现</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE-ini">配置-ini</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86-1">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0-1">使用实现</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE-go">配置-go</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86-2">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0-2">使用实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h1 id="1-开发任务实施">1. 开发任务实施 </h1>
+<h2 id="代码提交">代码提交 </h2>
+<ul>
+<li>add<br>
+[add][OLH5-77879,OLH5-77880,OLH5-77881,OLH5-77888,OLH5-77889,OLH5-77890] 苦肉破军狼袭神威神戟神躯</li>
+<li>mod<br>
+[mod][OLH5-77881,OLH5-77889] 神戟方天叠加计算，狼袭时机处理</li>
+<li>mod<br>
+[mod][OLH5-77879] 苦肉优化弃牌检查</li>
+<li>mod<br>
+[mod][OLH5-77881] 狼袭优化,自动适配上下限配置</li>
+<li>mod<br>
+[mod][OLH5-77881] 狼袭载入配置</li>
+</ul>
+<h2 id="协作内容">协作内容 </h2>
+<h3 id="沟通策划">沟通策划 </h3>
+<ul>
+<li>【苦肉】弃牌数为0或不为0的预期表现</li>
+<li>【破军】无法移除装备的削弱，是否在策划预计之内</li>
+<li>【神戟】多目标的老代码逻辑是否更改，策划想要的多目标效果</li>
+</ul>
+<h3 id="沟通前端">沟通前端 </h3>
+<ul>
+<li>【破军】前端收发消息取舍，仅通知所有手牌被移入破军牌区</li>
+<li>使用前端提供的界面进行联调</li>
+</ul>
+<h3 id="沟通测试">沟通测试 </h3>
+<ul>
+<li>【狼袭】所采用的配置文件进行确认</li>
+</ul>
+<h1 id="2-项目实现学习">2. 项目实现学习 </h1>
+<h2 id="问题">问题 </h2>
+<ol>
+<li>配置需要在代码提交前与策划沟通好，做到测试与本地的一致</li>
+<li>注意手杀和十周年技能实现的细微差别，在本周工作中实践学习</li>
+</ol>
+<h2 id="总结">总结 </h2>
+<ol>
+<li>
+<p>技能通用逻辑<br>
+学习技能操作逻辑的共性实现，以应对更多的技能开发需求，包括：选牌、入栈、转化等。筛选可选中目标；支持重新指定目标；计算伤害总值，实现条件技能效果，设置技能效果和目标，处理成功失败反馈等等</p>
+</li>
+<li>
+<p>技能buff实现<br>
+实现特定buff效果，保留技能状态</p>
+</li>
+<li>
+<p>配置读取<br>
+学习技能数据XML和INI配置文件的加载和使用</p>
+</li>
+<li>
+<p>中间件管理器<br>
+继续学习<code>mysql</code>、<code>redis</code>、<code>kafka</code>功能和管理，理解其数据存储、缓存和消息队列</p>
+</li>
+</ol>
+<p><strong>详细学习内容如下：</strong></p>
+<hr>
+<h2 id="逻辑-牌">逻辑-牌 </h2>
+<h3 id="选中牌依次入栈">选中牌依次入栈 </h3>
+<p>移荣</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-auto">auto</span> cardList <span class="token operator">=</span> <span class="token function">GetCardList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>cardList<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">SetOverMark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+PPlayCardList cards<span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> cardId <span class="token operator">:</span> cardList<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-auto">auto</span> card <span class="token operator">=</span> pGame<span class="token operator">-&gt;</span><span class="token function">GetPlayCard</span><span class="token punctuation">(</span>cardId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>card<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cards<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="选中随机牌指定牌">选中随机牌，指定牌 </h3>
+<p>破军</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>CRole <span class="token operator">*</span>ptarget <span class="token operator">=</span> <span class="token function">GetCurTargetRole</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//选中随机牌</span>
+PPlayCardList hand_cards<span class="token punctuation">;</span>
+ptarget<span class="token operator">-&gt;</span><span class="token function">GetHandCardZone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Random</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pMsg<span class="token operator">-&gt;</span>cardCnt <span class="token operator">-</span> pMsg<span class="token operator">-&gt;</span>dataCnt<span class="token punctuation">)</span><span class="token punctuation">,</span> hand_cards<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//选中指定牌</span>
+PPlayCardList equip_cards<span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>pMsg<span class="token operator">-&gt;</span>dataCnt<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    CPlayCard<span class="token operator">*</span> pcard <span class="token operator">=</span> ptarget<span class="token operator">-&gt;</span><span class="token function">GetEquipCardZone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Find</span><span class="token punctuation">(</span>pMsg<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pcard<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">APPLOG_ERROR_GAME_LOGIC</span><span class="token punctuation">(</span><span class="token string">"client logic error equip id="</span> <span class="token operator">&lt;&lt;</span> pMsg<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> FUN_FILE_LINE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    equip_cards<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>pcard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>开济</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>pTarget <span class="token operator">==</span> pCaster<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>pMsg<span class="token operator">-&gt;</span><span class="token function">data_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    m_pCard <span class="token operator">=</span> pCaster<span class="token operator">-&gt;</span><span class="token function">GetMyPlayCard</span><span class="token punctuation">(</span>pMsg<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//可见牌</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-else">else</span><span class="token punctuation">{</span>
+    m_pCard <span class="token operator">=</span> pCaster<span class="token operator">-&gt;</span><span class="token function">GetHandCardZone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//不可见牌</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="转化牌">转化牌 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token class-name">KenShang</span><span class="token double-colon punctuation">::</span><span class="token function">KenShang</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> CCardSpellData <span class="token operator">*</span>pSpellData<span class="token punctuation">,</span> CGame <span class="token operator">*</span>pGame<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token function">CSubstituteSpell</span><span class="token punctuation">(</span>pSpellData<span class="token punctuation">,</span>pGame<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token function">SetStituteSpellId</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>YOKA_SKILL<span class="token double-colon punctuation">::</span>SKILL_SHA<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">SetSubType</span><span class="token punctuation">(</span>CARD_SUB_TYPE_INVALID<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//普通杀</span>
+	<span class="token function">SetbEquit</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//可转化装备</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="设置执行参数-转化牌">设置执行参数-转化牌 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>CanCastParam castParam<span class="token punctuation">;</span>
+castParam<span class="token punctuation">.</span>spellid <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>YOKA_SKILL<span class="token double-colon punctuation">::</span>SKILL_SHA<span class="token punctuation">;</span>
+castParam<span class="token punctuation">.</span>psrc_role <span class="token operator">=</span> pRole<span class="token punctuation">;</span>
+castParam<span class="token punctuation">.</span>use_cardlist<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+castParam<span class="token punctuation">.</span><span class="token function">SetMark</span><span class="token punctuation">(</span>CanCastParam<span class="token double-colon punctuation">::</span>mark_ignore_distance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> item <span class="token operator">:</span> pUsecard<span class="token operator">-&gt;</span><span class="token function">GetPlayCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    castParam<span class="token punctuation">.</span>use_cardlist<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>item<span class="token operator">-&gt;</span><span class="token function">GetCardId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    castParam<span class="token punctuation">.</span>usecard_SubTypeList<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>item<span class="token operator">-&gt;</span><span class="token function">GetSubType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="使用牌-转化牌">使用牌-转化牌 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>CUseCardAction<span class="token operator">*</span> pUseCard <span class="token operator">=</span> <span class="token class-name">CUseCardAction</span><span class="token double-colon punctuation">::</span><span class="token function">PutCard</span><span class="token punctuation">(</span>pGame<span class="token punctuation">,</span> cardList<span class="token punctuation">,</span> pCaster<span class="token punctuation">,</span> <span class="token function">GetTargetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> EmUseMode<span class="token double-colon punctuation">::</span>mode_use_card<span class="token punctuation">,</span> m_pSrcAction<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="逻辑-角色">逻辑-角色 </h2>
+<h3 id="筛选可选中目标列表">筛选可选中目标列表 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>PRoleVct roleList<span class="token punctuation">;</span>
+pGame<span class="token operator">-&gt;</span><span class="token function">GetRoleListAll</span><span class="token punctuation">(</span>roleList<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> item <span class="token operator">:</span> roleList<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>item <span class="token operator">==</span> pRole<span class="token punctuation">)</span><span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">CSpellMgr</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">IsTargetInAttackRange</span><span class="token punctuation">(</span><span class="token operator">*</span>pRole<span class="token punctuation">,</span> <span class="token operator">*</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span><span class="token comment">//攻击范围外</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>item <span class="token operator">||</span> <span class="token operator">!</span>item<span class="token operator">-&gt;</span><span class="token function">IsAlive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">CSpellMgr</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">CanBeTarget</span><span class="token punctuation">(</span>castParam<span class="token punctuation">,</span> item<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>
+    pParam<span class="token operator">-&gt;</span>targetList<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>item<span class="token operator">-&gt;</span><span class="token function">GetSeatId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="重新指定目标列表">重新指定目标列表 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">GetTargetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">SetOverMark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+pSha<span class="token operator">-&gt;</span><span class="token function">GetTargetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> item <span class="token operator">:</span> <span class="token function">GetTargetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pSha<span class="token operator">-&gt;</span><span class="token function">GetTargetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="逻辑-技能">逻辑-技能 </h2>
+<h3 id="伤害总值">伤害总值 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> nCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> item <span class="token operator">:</span> pSha<span class="token operator">-&gt;</span><span class="token function">GetDamageTargetMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    nCount <span class="token operator">+=</span> item<span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="若以此法">若以此法... </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>usecard_action<span class="token punctuation">.</span>h
+<span class="token comment">// 逻辑开始处设置标志，结束时关闭，过程中检测是否标志即可确定是否因此...</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">SetKenShangFlag</span><span class="token punctuation">(</span><span class="token keyword keyword-bool">bool</span> flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> m_ken_shang_flag <span class="token operator">=</span> flag<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword keyword-bool">bool</span> <span class="token function">GetKenShangFlag</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> m_ken_shang_flag<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre><h3 id="若a则b非锁定技的锁定效果">若A则B，非锁定技的锁定效果 </h3>
+<p>垦伤</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>pParam<span class="token operator">-&gt;</span>bLocked <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token comment">//针对非锁定技， 触发后是否是直接使用</span>
+</code></pre><h3 id="设置当前技能效果">设置当前技能效果 </h3>
+<p>破军</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>pParam<span class="token operator">-&gt;</span>uTriggerIndex <span class="token operator">=</span> effect_delcard<span class="token punctuation">;</span>
+</code></pre><h3 id="设置技能目标">设置技能目标 </h3>
+<p>破军</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>pParam<span class="token operator">-&gt;</span>targetList<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>seatid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+pParam<span class="token operator">-&gt;</span>bTargetLocked <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token comment">////（武将技或者装备技能）不是锁定技时,使用技能时目标是否会被自动赋值成targetList</span>
+</code></pre><h3 id="成功失败绑定函数">成功失败绑定函数 </h3>
+<p>开济</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>pUseCard<span class="token operator">-&gt;</span><span class="token function">SetActSuccesCallBack</span><span class="token punctuation">(</span>boost<span class="token double-colon punctuation">::</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>KaiJi<span class="token double-colon punctuation">::</span>SuccesUseCard<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	pUseCard<span class="token operator">-&gt;</span><span class="token function">SetActFailedCallBack</span><span class="token punctuation">(</span>boost<span class="token double-colon punctuation">::</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>KaiJi<span class="token double-colon punctuation">::</span>FailedUseCard<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="netmsg-取消">netmsg-取消 </h3>
+<p>开济</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token comment">//常用于case默认分支触发</span>
+<span class="token function">ClearAllOfWaitingOpt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">SetOverMark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-return">return</span> SPELL_CAST_OK<span class="token punctuation">;</span>
+</code></pre><h3 id="请求client消息">请求client消息 </h3>
+<p>开济</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">AskClientResponseSpell</span><span class="token punctuation">(</span>pCaster<span class="token operator">-&gt;</span><span class="token function">GetSeatId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">GetSpellId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pTarget<span class="token operator">-&gt;</span><span class="token function">GetSeatId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pCaster<span class="token operator">-&gt;</span><span class="token function">GetSeatId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> MsgRoleOptTargetNtf<span class="token double-colon punctuation">::</span>OPT_COMMON_1<span class="token punctuation">,</span> pGame<span class="token operator">-&gt;</span><span class="token function">GetPlayCardWaitTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">SetResolveStep</span><span class="token punctuation">(</span>step_discard_wait<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="通知给client消息">通知给client消息 </h3>
+<p>破军</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>MsgRoleSpellOptRep msg<span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>seatId <span class="token operator">=</span> <span class="token function">GetCasterSeatId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>optType <span class="token operator">=</span> MsgRoleSpellOptRep<span class="token double-colon punctuation">::</span>OPP_SPELL_EFFECT<span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>SpellId <span class="token operator">=</span> <span class="token function">GetSpellId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>dataCnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>Len <span class="token operator">=</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">GetGame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Broadcast</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="随机数">随机数 </h3>
+<p>狼袭</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token class-name">CSgsPubFun</span><span class="token double-colon punctuation">::</span><span class="token function">rand_uint</span><span class="token punctuation">(</span>lowerLimit<span class="token punctuation">,</span> upperLimit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="buff">buff </h2>
+<h3 id="杀无视次数">杀无视次数 </h3>
+<p>开济</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>param<span class="token punctuation">.</span><span class="token function">SetMark</span><span class="token punctuation">(</span>CanCastParam<span class="token double-colon punctuation">::</span>mark_active_use<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>m_pCard<span class="token operator">-&gt;</span><span class="token function">GetSpellId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>YOKA_SKILL<span class="token double-colon punctuation">::</span>SKILL_SHA<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    param<span class="token punctuation">.</span><span class="token function">SetMark</span><span class="token punctuation">(</span>CanCastParam<span class="token double-colon punctuation">::</span>mark_spell_not_check_times<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="技能状态保留">技能状态保留 </h3>
+<p>破军</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">CPoJun_JX_State</span> <span class="token operator">:</span><span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">CSpellState</span></span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+	<span class="token function">CPoJun_JX_State</span><span class="token punctuation">(</span>CRole<span class="token operator">*</span> pCasterRole<span class="token punctuation">,</span> CRole<span class="token operator">*</span> pOwner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-virtual">virtual</span> <span class="token keyword keyword-bool">bool</span> <span class="token function">CanRemove</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> TRemoveParam<span class="token operator">&amp;</span> removeParam<span class="token punctuation">)</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-override">override</span><span class="token punctuation">;</span><span class="token comment">//角色阵亡，是否可以移动特殊牌区</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h2 id="配置-技能数据">配置-技能数据 </h2>
+<p><code>Develop\server_xml</code></p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spell</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>14081<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Param</span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">desc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>回复A点体力<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Param</span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">desc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>摸牌阶段摸牌数加B<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre><pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token comment">//获取配置：出牌阶段限制次数</span>
+<span class="token comment">//const CCardSpellExtendData*pSpellExData = CCardDataRepository::Singleton(GAME_START_TIME)-&gt;GetSpellExtendData(SpellId());</span>
+<span class="token keyword keyword-const">const</span> CCardSpellExtendData<span class="token operator">*</span> pSpellExData <span class="token operator">=</span> <span class="token class-name">CCardDataRepository</span><span class="token double-colon punctuation">::</span><span class="token function">Singleton</span><span class="token punctuation">(</span>pGame<span class="token operator">-&gt;</span><span class="token function">GetGameStartTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">GetSpellExtendData</span><span class="token punctuation">(</span><span class="token function">SpellId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> spell_time_limit <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>pSpellExData<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    spell_time_limit <span class="token operator">=</span> pSpellExData<span class="token operator">-&gt;</span><span class="token function">getParam</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-else">else</span>
+<span class="token punctuation">{</span>
+    <span class="token function">APPLOG_ERROR_GAME_LOGIC</span><span class="token punctuation">(</span><span class="token string">"KuRou spell config error:spell_time_limit"</span> <span class="token operator">&lt;&lt;</span> FUN_FILE_LINE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="配置-xml">配置-xml </h2>
+<h3 id="加载管理">加载管理 </h3>
+<p>例：<code>GeneralTrialConfig</code><br>
+武将试炼配置。采用单例模式，通过读取XML文件来加载配置数据，提供一系列的接口来获取配置数据</p>
+<ul>
+<li>load函数<br>
+从XML文件中加载配置数据。首先获取配置文件的路径，使用<code>path +=""</code>更改路径，然后使用TinyXML库解析XML文件。解析过程中，会根据不同的XML节点调用相应的加载函数</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-bool">bool</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>配置加载函数<br>
+负责解析XML文件中的特定节点，并存储在相应的数据结构中</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-bool">bool</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">LoadCommonCfg</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> TiXmlElement<span class="token operator">&amp;</span> rElement<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>配置数据访问函数<br>
+用于访问加载后的配置数据（如<code>GetBaseCompleteList</code>、<code>GetRefreshNode</code>等）</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-const">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>GeneralTrialConfig<span class="token double-colon punctuation">::</span>BaseCompleteNode<span class="token operator">&gt;</span><span class="token operator">&amp;</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">GetBaseCompleteList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> m_base_complete_list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="使用实现">使用实现 </h3>
+<p>使用<code>m_data.getGeneralTrialData()</code>获取当前活动的体力数据，存储在<code>p_pbTrialData</code>中</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-auto">auto</span> rCommonCfg <span class="token operator">=</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">GetCommonData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> uAddValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>pbTrialData<span class="token punctuation">.</span><span class="token function">valuetimerefresh</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    uAddValue <span class="token operator">=</span> rCommonCfg<span class="token punctuation">.</span>uDailyRenew<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="配置-ini">配置-ini </h2>
+<h3 id="加载管理-1">加载管理 </h3>
+<ul>
+<li>ini文件<br>
+字段分区，键值表</li>
+</ul>
+<pre data-role="codeBlock" data-info="ini" class="language-ini ini"><code><span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">app</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">server_id</span> <span class="token punctuation">=</span><span class="token value attr-value">40000</span>
+<span class="token key attr-name">localname</span> <span class="token punctuation">=</span><span class="token value attr-value">电信测试区</span>
+<span class="token key attr-name">localid</span><span class="token punctuation">=</span><span class="token value attr-value">113</span>
+<span class="token key attr-name">IsDevelop</span><span class="token punctuation">=</span><span class="token value attr-value">1</span>
+</code></pre><ul>
+<li>CBaseConfig类<br>
+getxxx，例如getuint从一个配置文件中获取一个指定字段（field）和键（key）对应的值，并将这个值转换为无符号整型（unsigned int）。</li>
+</ul>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span>  <span class="token class-name">CBaseConfig</span><span class="token double-colon punctuation">::</span><span class="token function">getuint</span><span class="token punctuation">(</span>	string file<span class="token punctuation">,</span>string field<span class="token punctuation">,</span>string key<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> def<span class="token comment">/*=0 */</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	string strvalue <span class="token operator">=</span> <span class="token function">_getstring</span><span class="token punctuation">(</span>file<span class="token punctuation">,</span>field<span class="token punctuation">,</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span> strvalue<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> def<span class="token punctuation">;</span>
+	<span class="token keyword keyword-return">return</span> boost<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">lexical_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>strvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="使用实现-1">使用实现 </h3>
+<p>例：读取<code>m_localname</code></p>
+<p>配置宏定义，getstring读取配置中的string</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CS_CONFIGFILE</span>   <span class="token string">"cs_config.ini"</span></span>
+
+<span class="token keyword keyword-void">void</span> <span class="token class-name">CNetMg</span><span class="token operator">&lt;</span>XNetServerMg<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span><span class="token function">init_localparam</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	m_localname <span class="token operator">=</span> <span class="token class-name">CBaseConfig</span><span class="token double-colon punctuation">::</span><span class="token function">getstring</span><span class="token punctuation">(</span>CS_CONFIGFILE<span class="token punctuation">,</span><span class="token string">"app"</span><span class="token punctuation">,</span><span class="token string">"localname"</span><span class="token punctuation">,</span><span class="token string">""</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>m_localname<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token function">APPLOG_FATAL</span><span class="token punctuation">(</span><span class="token string">"[读大区名字失败!] 文件名："</span><span class="token operator">&lt;&lt;</span>CS_CONFIGFILE<span class="token operator">&lt;&lt;</span><span class="token string">";app中localname字段"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre><h2 id="配置-go">配置-go </h2>
+<h3 id="加载管理-2">加载管理 </h3>
+<p><code>conf_manager.go</code><br>
+加载和重载配置文件，提供线程安全的访问和修改配置的方法。通过回调函数通知配置加载完成，并使用读写锁来保护配置的并发访问</p>
+<ul>
+<li>
+<p>ConfManager</p>
+<ul>
+<li><code>app</code>: 指向ccframe框架的Application实例。</li>
+<li><code>Paths</code>: 配置文件路径。</li>
+<li><code>Develop</code>: 是否处于开发模式。</li>
+<li><code>loadCallback</code>: 配置加载完成后的回调函数。</li>
+<li><code>confLock</code>: 读写锁，用于保护配置的并发访问。</li>
+<li><code>gameConf</code>: 当前加载的游戏配置。</li>
+</ul>
+</li>
+<li>
+<p>加载配置<br>
+调用<code>gameconfig.go</code>的<code>Load</code>方法加载配置文件</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>GameConfig<span class="token punctuation">)</span> <span class="token function">Load</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+t <span class="token operator">:=</span> reflect<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Elem</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-for">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> t<span class="token punctuation">.</span><span class="token function">NumField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fieldinfo <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    filename <span class="token operator">:=</span> fieldinfo<span class="token punctuation">.</span>Tag<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> p<span class="token punctuation">.</span><span class="token function">IsSet</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Interface</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        cfg<span class="token punctuation">,</span> ok <span class="token operator">:=</span> tmp<span class="token punctuation">.</span><span class="token punctuation">(</span>ConfigBase<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> ok <span class="token punctuation">{</span>
+            result <span class="token operator">:=</span> cfg<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>CfgPath<span class="token punctuation">,</span> <span class="token string">"xmlconfig/"</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-if">if</span> result <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-return">return</span> fmt<span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"load %s fail:%v"</span><span class="token punctuation">,</span> filename<span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-return">return</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>重载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">ReloadXml</span><span class="token punctuation">(</span>vctResult <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> pmsg <span class="token operator">*</span>ccproto<span class="token punctuation">.</span>SSSS_GmCmdNtf<span class="token punctuation">,</span> app <span class="token operator">*</span>ccframe<span class="token punctuation">.</span>Application<span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>根据传入的命令参数重新加载配置文件。如果命令是<code>config all</code>，则重新加载所有配置文件；如果是其他命令，则只重新加载指定的配置文件。</p>
+<ul>
+<li>获取配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">GetConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>conf<span class="token punctuation">.</span>GameConfig <span class="token punctuation">{</span>
+	<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>返回当前加载的游戏配置。</p>
+<h3 id="使用实现-2">使用实现 </h3>
+<ul>
+<li><code>Init</code>初始化加载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token boolean">_</span><span class="token punctuation">,</span> err <span class="token operator">=</span> confMgr<span class="token punctuation">.</span><span class="token function">LoadConf</span><span class="token punctuation">(</span><span class="token string">"character.xml"</span><span class="token punctuation">,</span> <span class="token string">"hd_roguelike.xml"</span><span class="token punctuation">,</span> <span class="token string">"cha_spell.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"ff_dbs_pay_gift.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_h5_task_main.xml"</span><span class="token punctuation">,</span>
+    <span class="token string">"hd_all_active.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_global_conf.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_bar_control.xml"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">"LoadConf"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> err
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>命令行<br>
+根据输入使用<code>path.Join</code>更改路径</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>flag<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> <span class="token operator">*</span>csConfig <span class="token operator">==</span> <span class="token string">"cs_config.ini"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span>csConfig <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">,</span> <span class="token operator">*</span>csConfig<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+  </html>

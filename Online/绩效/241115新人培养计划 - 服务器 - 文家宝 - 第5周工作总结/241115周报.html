@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>241115周报</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\wenjiabao\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: 'vivo Sans';
+  font-size: 18px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><html><head><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body></body></html>
+    </head>
+    <body for="html-export" >
+      <div class="crossnote markdown-preview  "  >
+      
+<ul>
+<li><a href="#1-%E5%BC%80%E5%8F%91%E4%BB%BB%E5%8A%A1">1. 开发任务</a>
+<ul>
+<li><a href="#%E5%86%85%E5%AE%B9">内容</a>
+<ul>
+<li><a href="#%E8%8B%A6%E8%82%89">苦肉</a></li>
+<li><a href="#%E7%8B%BC%E8%A2%AD">狼袭</a></li>
+<li><a href="#%E7%A0%B4%E5%86%9B">破军</a></li>
+<li><a href="#%E4%BF%AE%E7%BD%97">修罗</a></li>
+<li><a href="#%E7%A5%9E%E5%A8%81">神威</a></li>
+<li><a href="#%E7%A5%9E%E8%BA%AF">神躯</a></li>
+<li><a href="#%E7%A5%9E%E6%88%9F">神戟</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%9B%E5%BA%A6">进度</a></li>
+</ul>
+</li>
+<li><a href="#2-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0">2. 项目实现</a>
+<ul>
+<li><a href="#2-1-%E9%85%8D%E7%BD%AE">2-1. 配置</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0">使用实现</a></li>
+</ul>
+</li>
+<li><a href="#2-2-%E4%B8%AD%E9%97%B4%E4%BB%B6">2-2. 中间件</a>
+<ul>
+<li><a href="#redis">Redis</a></li>
+<li><a href="#kafka">Kafka</a>
+<ul>
+<li><a href="#%E5%86%85%E5%AE%B9-1">内容</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0">实现</a></li>
+</ul>
+</li>
+<li><a href="#mysql">MySQL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-%E5%85%B6%E4%BB%96">3. 其他</a>
+<ul>
+<li><a href="#review">Review</a>
+<ul>
+<li><a href="#%E5%8F%AF%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81">可优化代码</a></li>
+<li><a href="#%E5%AE%A1%E6%9F%A5%E5%8E%9F%E5%88%99">审查原则</a></li>
+</ul>
+</li>
+<li><a href="#gochat">gochat</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8A%E5%91%A8%E9%97%AE%E9%A2%98">上周问题</a>
+<ul>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%BA%8F%E5%88%97%E5%8C%96">协议序列化</a>
+<ul>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0-1">实现</a></li>
+</ul>
+</li>
+<li><a href="#ants">ants</a>
+<ul>
+<li><a href="#%E5%8E%9F%E7%90%86-1">原理</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0-2">实现</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8">应用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h1 id="1-开发任务">1. 开发任务 </h1>
+<h2 id="内容">内容 </h2>
+<h3 id="苦肉">苦肉 </h3>
+<p>出牌阶段限3次，你可以（弃置0张牌）失去1点体力，然后回复1点体力</p>
+<ul>
+<li>H<br>
+技能流程：弃牌，体力变化，结束</li>
+<li>CONST<br>
+出牌阶段限制次数3<br>
+弃牌数0<br>
+回复体力数1</li>
+<li>REGISTER<br>
+REGISTER_NORMAL_SPELL</li>
+<li>CanTriggerMe<br>
+True</li>
+<li>CanCast<br>
+空检查：参数,角色存活<br>
+界限检查：濒死，使用次数，弃牌合法</li>
+<li>Resolve</li>
+</ul>
+<ol>
+<li>弃牌<br>
+增加次数<br>
+是否弃牌</li>
+<li>体力变化<br>
+失去体力<br>
+回复体力</li>
+<li>结束</li>
+</ol>
+<ul>
+<li>Data</li>
+<li>State</li>
+<li>TimeOutCallBack</li>
+</ul>
+<h3 id="狼袭">狼袭 </h3>
+<p>每个人的准备阶段，你可以对一名体力值不大于你的其他角色造成1~2点随机伤害。</p>
+<ul>
+<li>
+<p>H</p>
+</li>
+<li>
+<p>CONST<br>
+伤害值下限1<br>
+伤害值上限2</p>
+</li>
+<li>
+<p>REGISTER<br>
+注册技能类型<code>REGISTER_TRIGGER_SPELL</code><br>
+<code>trigger_action.cpp</code>注册时机Opp_phase_begin</p>
+</li>
+<li>
+<p>CanTriggerMe</p>
+</li>
+<li>
+<p>CanCast<br>
+//界限检查：选择角色数，选择角色体力</p>
+</li>
+<li>
+<p>Resolve<br>
+获取配置：伤害下限上限<br>
+随机伤害值</p>
+</li>
+<li>
+<p>Data</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>
+<p>TimeOutCallBack</p>
+</li>
+</ul>
+<h3 id="破军">破军 </h3>
+<p>当你使用【杀】指定目标后，你可以将其所有手牌移出游戏直到回合结束（X为其体力值）。你使用的【杀】对手牌区与装备区内牌数皆不大于你的角色造成的伤害+1。</p>
+<ul>
+<li>
+<p>H<br>
+技能效果：盖牌，还原牌，加伤<br>
+盖牌流程：开始，移动卡牌，结束</p>
+</li>
+<li>
+<p>CONST</p>
+</li>
+<li>
+<p>REGISTER</p>
+<ul>
+<li>
+<p>注册技能类型<code>REGISTER_TRIGGER_SPELL</code></p>
+</li>
+<li>
+<p><code>trigger_action.cpp</code>注册时机<br>
+Opp_after_choose_target<br>
+Opp_after_turn_end<br>
+Opp_When_Cause_Damage</p>
+</li>
+<li>
+<p><code>role.h</code>注册标记牌区域，<code>role.cpp</code>设置标记牌可见属性</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CanTriggerMe<br>
+匹配检查：杀的使用者<br>
+空检查：目标手牌数<br>
+匹配检查：技能效果时机</p>
+</li>
+<li>
+<p>CanCast<br>
+若为锁定技，TRUE</p>
+</li>
+<li>
+<p>Resolve</p>
+</li>
+</ul>
+<ol>
+<li>盖牌<br>
+请求：选牌（客户端直接全选）</li>
+<li>还原牌<br>
+空检查：武将牌区<br>
+消息：技能效果生效</li>
+<li>加伤</li>
+</ol>
+<ul>
+<li>State<br>
+CanRemove</li>
+<li>TimeOutCallBack<br>
+选择所有手牌</li>
+</ul>
+<h3 id="修罗">修罗 </h3>
+<p>准备阶段，你可以弃置一张牌，然后弃置你判定区里所有牌。</p>
+<ul>
+<li>H<br>
+技能流程：<br>
+step_begin = 0, //选择要弃的牌<br>
+step_ask_discard_judge, //弃置判定区所有牌<br>
+step_end</li>
+<li>CONST</li>
+<li>REGISTER
+<ul>
+<li>注册技能类型<code>REGISTER_TRIGGER_SPELL</code></li>
+<li><code>trigger_action.cpp</code>注册时机Opp_phase_begin</li>
+</ul>
+</li>
+<li>CanTriggerMe<br>
+空检查：判定区</li>
+<li>CanCast<br>
+界限检查：选中牌列表</li>
+<li>Resolve</li>
+</ul>
+<ol>
+<li>step_begin<br>
+弃选中牌区的唯一牌</li>
+<li>step_ask_discard_judge<br>
+选择判定区所有牌弃置</li>
+</ol>
+<ul>
+<li>Data</li>
+<li>State</li>
+<li>TimeOutCallBack</li>
+</ul>
+<h3 id="神威">神威 </h3>
+<p>锁定技，摸牌阶段，你多摸X张牌，你的手牌上限+X（X为敌方角色数）。</p>
+<ul>
+<li>
+<p>H</p>
+</li>
+<li>
+<p>CONST</p>
+</li>
+<li>
+<p>REGISTER</p>
+<ul>
+<li>注册技能类型<code>REGISTER_TRIGGER_SPELL</code></li>
+<li><code>trigger_action.cpp</code>注册时机Opp_add_deal_cnt</li>
+</ul>
+</li>
+<li>
+<p>CanTriggerMe<br>
+匹配检查：当前回合<br>
+获取敌人数</p>
+</li>
+<li>
+<p>CanCast<br>
+若为锁定技，TRUE</p>
+</li>
+<li>
+<p>Resolve<br>
+增加摸牌数<br>
+GetExHandCardLimit</p>
+</li>
+</ul>
+<h3 id="神躯">神躯 </h3>
+<p>每名角色的准备阶段，若你的手牌数不大于体力上限，你可以摸X张牌。（X为你的当前体力上限）当你受到伤害后，你可以使用一张【桃】。</p>
+<ul>
+<li>H<br>
+技能流程：<br>
+step_begin = 0,<br>
+step_wait_use_tao,<br>
+step_end</li>
+<li>CONST<br>
+出牌阶段限制次数3</li>
+<li>REGISTER
+<ul>
+<li>注册技能类型<code>REGISTER_TRIGGER_SPELL</code></li>
+<li><code>trigger_action.cpp</code>注册时机Opp_when_turn_begin，Opp_hurt_but_not_dead</li>
+</ul>
+</li>
+<li>CanTriggerMe<br>
+界限检查：手牌数<br>
+是否可以使用桃</li>
+<li>CanCast<br>
+若为锁定技，TRUE</li>
+<li>Resolve</li>
+</ul>
+<ol>
+<li>step_begin<br>
+匹配检查：动作</li>
+<li>step_wait_use_tao</li>
+</ol>
+<ul>
+<li>NetMsg</li>
+</ul>
+<ol>
+<li>取消使用</li>
+<li>使用牌<br>
+消息：使用桃</li>
+<li>使用技能</li>
+</ol>
+<ul>
+<li>Data</li>
+<li>State</li>
+<li>TimeOutCallBack</li>
+</ul>
+<h3 id="神戟">神戟 </h3>
+<p>你出牌阶段使用【杀】无次数限制，且可以多指定两个目标。</p>
+<ul>
+<li>H</li>
+<li>CONST</li>
+<li>REGISTER
+<ul>
+<li><code>cardIdDefineEnumClass.h</code>注册技能ID</li>
+</ul>
+</li>
+<li>CanTriggerMe</li>
+<li>CanCast<br>
+若为锁定技，TRUE</li>
+<li>Resolve<br>
+无次数限制</li>
+<li>NetMsg</li>
+<li>Data</li>
+<li>State</li>
+<li>TimeOutCallBack</li>
+</ul>
+<h2 id="进度">进度 </h2>
+<p>7个技能编写完成，进入前后端联调阶段，已与前端沟通，下周开始对接测试</p>
+<p><strong>测试流程</strong></p>
+<ul>
+<li>
+<p>被动<br>
+与前端无交互，直接测试对应时机</p>
+</li>
+<li>
+<p>附体<br>
+与前端有交互，放在原技能上测试，先暂时交换两个技能id，之后再改回去</p>
+</li>
+<li>
+<p>临时<br>
+与前端有交互，后端临时手动命令，扮演处理交互的角色</p>
+</li>
+</ul>
+<h1 id="2-项目实现">2. 项目实现 </h1>
+<h2 id="2-1-配置">2-1. 配置 </h2>
+<h3 id="加载管理">加载管理 </h3>
+<p><code>conf_manager.go</code><br>
+加载和重载配置文件，提供线程安全的访问和修改配置的方法。通过回调函数通知配置加载完成，并使用读写锁来保护配置的并发访问</p>
+<ul>
+<li>
+<p>ConfManager</p>
+<ul>
+<li><code>app</code>: 指向ccframe框架的Application实例。</li>
+<li><code>Paths</code>: 配置文件路径。</li>
+<li><code>Develop</code>: 是否处于开发模式。</li>
+<li><code>loadCallback</code>: 配置加载完成后的回调函数。</li>
+<li><code>confLock</code>: 读写锁，用于保护配置的并发访问。</li>
+<li><code>gameConf</code>: 当前加载的游戏配置。</li>
+</ul>
+</li>
+<li>
+<p>加载配置<br>
+调用<code>gameconfig.go</code>的<code>Load</code>方法加载配置文件</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>GameConfig<span class="token punctuation">)</span> <span class="token function">Load</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+t <span class="token operator">:=</span> reflect<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Elem</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-for">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> t<span class="token punctuation">.</span><span class="token function">NumField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fieldinfo <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    filename <span class="token operator">:=</span> fieldinfo<span class="token punctuation">.</span>Tag<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> p<span class="token punctuation">.</span><span class="token function">IsSet</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Interface</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        cfg<span class="token punctuation">,</span> ok <span class="token operator">:=</span> tmp<span class="token punctuation">.</span><span class="token punctuation">(</span>ConfigBase<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> ok <span class="token punctuation">{</span>
+            result <span class="token operator">:=</span> cfg<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>CfgPath<span class="token punctuation">,</span> <span class="token string">"xmlconfig/"</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-if">if</span> result <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-return">return</span> fmt<span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"load %s fail:%v"</span><span class="token punctuation">,</span> filename<span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-return">return</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>重载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">ReloadXml</span><span class="token punctuation">(</span>vctResult <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> pmsg <span class="token operator">*</span>ccproto<span class="token punctuation">.</span>SSSS_GmCmdNtf<span class="token punctuation">,</span> app <span class="token operator">*</span>ccframe<span class="token punctuation">.</span>Application<span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>根据传入的命令参数重新加载配置文件。如果命令是<code>config all</code>，则重新加载所有配置文件；如果是其他命令，则只重新加载指定的配置文件。</p>
+<ul>
+<li>获取配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">GetConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>conf<span class="token punctuation">.</span>GameConfig <span class="token punctuation">{</span>
+	<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>返回当前加载的游戏配置。</p>
+<h3 id="使用实现">使用实现 </h3>
+<ul>
+<li><code>Init</code>初始化加载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token boolean">_</span><span class="token punctuation">,</span> err <span class="token operator">=</span> confMgr<span class="token punctuation">.</span><span class="token function">LoadConf</span><span class="token punctuation">(</span><span class="token string">"character.xml"</span><span class="token punctuation">,</span> <span class="token string">"hd_roguelike.xml"</span><span class="token punctuation">,</span> <span class="token string">"cha_spell.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"ff_dbs_pay_gift.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_h5_task_main.xml"</span><span class="token punctuation">,</span>
+    <span class="token string">"hd_all_active.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_global_conf.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_bar_control.xml"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">"LoadConf"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> err
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>命令行<br>
+根据输入使用<code>path.Join</code>更改路径</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>flag<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> <span class="token operator">*</span>csConfig <span class="token operator">==</span> <span class="token string">"cs_config.ini"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span>csConfig <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">,</span> <span class="token operator">*</span>csConfig<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="2-2-中间件">2-2. 中间件 </h2>
+<h3 id="redis">Redis </h3>
+<ul>
+<li>
+<p><code>RedisClient</code><br>
+RedisClient 类用于与Redis服务器进行交互。它包含一个嵌套的Handle结构体，用于表示订阅的句柄。提供了连接、执行命令、订阅和发布消息等功能。使用了Boost.Asio库来处理异步操作</p>
+</li>
+<li>
+<p><code>RedisWorkerGroup</code><br>
+RedisWorker 类负责单个 Redis 连接的建立和命令执行，而 RedisWorkerGroup 类则管理多个 RedisWorker 实例，提供了方便的方式来处理多个 Redis 连接。</p>
+</li>
+<li>
+<p><code>RedisMg</code><br>
+RedisMg 类使用单例模式，方便全局访问和管理。通过DoCommand方法执行各种Redis命令，支持不同参数形式。</p>
+</li>
+</ul>
+<h3 id="kafka">Kafka </h3>
+<h4 id="内容-1">内容 </h4>
+<ol>
+<li>Topic</li>
+</ol>
+<ul>
+<li>
+<p><strong>定义</strong>：一个Topic对应一个消息队列，Kafka支持多生产者、多消费者模式。</p>
+</li>
+<li>
+<p><strong>特性</strong>：为实现可伸缩性，Kafka将Topic分为多个Partition，消息被平均分配到各Partition中。</p>
+</li>
+</ul>
+<ol start="2">
+<li>Partition</li>
+</ol>
+<ul>
+<li>
+<p><strong>定义</strong>：Partition是Kafka存储消息的基本单位。</p>
+</li>
+<li>
+<p><strong>特性</strong>：每个Partition内消息通过偏移量(offset)唯一标识。Kafka保证Partition内消息有序，但全局无序。</p>
+</li>
+</ul>
+<ol start="3">
+<li>消费模型</li>
+</ol>
+<ul>
+<li>
+<p><strong>队列模式（点对点模式）</strong>：</p>
+<ul>
+<li>多个消费者共同消费同一队列，每条消息仅发送给一个消费者。</li>
+</ul>
+</li>
+<li>
+<p><strong>发布/订阅模式</strong>：</p>
+<ul>
+<li>消息会发送给所有订阅主题的消费者。</li>
+</ul>
+</li>
+<li>
+<p><strong>Consumer Group</strong>：</p>
+<ul>
+<li>Kafka引入Consumer Group概念，组内消费者以队列模式工作，但整个Group以发布/订阅模式消费Topic。</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Partition与消费模型</li>
+</ol>
+<ul>
+<li>
+<p><strong>消息存储</strong>：Partition中的消息可被不同Consumer Group多次消费，消息除非到期否则不会被删除。</p>
+</li>
+<li>
+<p><strong>消费位置</strong>：Partition会为每个Consumer Group保存消费位置偏移量。</p>
+</li>
+<li>
+<p><strong>消费规则</strong>：同一Consumer Group内，一个Partition只能被一个Consumer消费。</p>
+<ul>
+<li>Consumer数量多于Partition时会有空闲Consumer。</li>
+<li>Consumer数量少于Partition时，一个Consumer可能消费多个Partition。</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>物理存储</li>
+</ol>
+<ul>
+<li>
+<p><strong>Broker</strong>：Partition存储在Broker上，Broker可以是物理机或集群。</p>
+</li>
+<li>
+<p><strong>副本机制</strong>：为提高可用性，Partition会有多个副本存储在不同Broker中。</p>
+<ul>
+<li>通过Zookeeper的Leader选举机制选出主副本负责读写。</li>
+<li>其他副本同步主副本消息。</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>总结</li>
+</ol>
+<ul>
+<li>Kafka通过Topic、Partition、Consumer Group等概念实现了高效的消息处理机制。</li>
+<li>Kafka保证Partition内消息有序，但全局无序。</li>
+<li>Partition副本机制提高了系统的可用性和容错性。</li>
+</ul>
+<h4 id="实现">实现 </h4>
+<ul>
+<li>
+<p><code>KafkaProducerMail</code><br>
+用于在Web邮件系统中，通过Kafka实现邮件的异步发送和处理</p>
+<ul>
+<li>单例模式:使用单例模式,确保全局只有一个Kafka生产者实例</li>
+<li>初始化:Init初始化Kafka生产者和topic</li>
+<li>发送消息：通过不同的 Mail2XXX 方法发送邮件消息到Kafka，这些消息可以被Kafka的消费者处理，实现邮件的异步处理和分发。</li>
+</ul>
+</li>
+<li>
+<p><code>KafkaMsgUtil</code><br>
+用于生成各种事件信息的JSON字符串，包括服务器状态、用户行为、系统错误，通过Kafka发送这些信息可以实现集中式日志记录和监控。</p>
+<ul>
+<li>JSON构造：使用CTinyJson类（基于cJSON库）创建和操作JSON对象。</li>
+<li>事件数据封装：为每种类型的事件定义一个方法，以及枚举，将事件相关数据添加到JSON对象中。</li>
+<li>格式化输出：将JSON对象转换为字符串，以便发送。</li>
+</ul>
+</li>
+</ul>
+<h3 id="mysql">MySQL </h3>
+<ul>
+<li><code>CMySQLClient</code><br>
+CMySQLClient类封装了与MySQL数据库的连接和操作，继承线程类，通过线程的方式异步处理SQL请求，提高并发性能</li>
+</ul>
+<ol>
+<li>
+<p>方法</p>
+<pre class="language-text"> ConnectDB方法用于连接到MySQL数据库，第一个重载版本接受数据库的主机名、端口号、数据库名、用户名和密码作为参数，第二个重载版本使用默认参数连接到数据库。
+ PushSqlReq方法将SQL请求添加到请求队列中。
+ real_escape_string方法用于转义SQL字符串，防止SQL注入攻击。
+ empty方法检查请求队列是否为空。
+ CheckMySqlIsConnect方法检查MySQL连接是否有效。
+ IsConnectNotPing方法检查MySQL连接是否有效且未超时。
+</pre>
+</li>
+<li>
+<p>成员</p>
+<pre class="language-text"> m_pDBSystem是一个指向CMySQLDBSystem类的指针，用于管理数据库系统。
+ m_pMySqlConn是一个指向CMySQLConnection类的指针，表示MySQL连接。
+</pre>
+</li>
+</ol>
+<ul>
+<li><code>CMySQLDBSystem</code><br>
+用于管理MySQL数据库操作的模块，通过线程池来提高性能，并且提供了多种方式添加SQL请求,提供接口用于监控和管理数据库连接及操作。</li>
+</ul>
+<ol>
+<li>
+<p>系统接口</p>
+<pre class="language-text"> SetMysqlServerListInfo：设置MySQL服务器连接信息。
+ Startup：启动数据库系统。
+ Stop：停止数据库系统。
+ RunMsg：运行消息处理，处理最多imaxcount条消息。
+ AddMysqlConnect：添加MySQL连接。
+ CheckMysqlConnect：检查MySQL连接。
+ ClearDbRunLog：清除数据库运行日志。
+</pre>
+</li>
+<li>
+<p>用户接口</p>
+<pre class="language-text"> AddSQLRequest_byaccount：通过用户账号添加SQL请求。
+ AddSQLRequest_bytblname：通过表名添加SQL请求。
+ AddSQLRequest_byrandom：随机选择一个客户端添加SQL请求。
+ AddSQLRequest_BySqlClient：通过指定的SQL客户端添加SQL请求。
+ AddSQLRequest_syslog：添加数据库日志请求。
+</pre>
+</li>
+</ol>
+<ul>
+<li>
+<p><code>CMySQLConnection</code>和<code>CMySQLRecordSet</code><br>
+用于封装MSSQL和MySQL数据库接口。操作记录集和连接,简化MySQL数据库的操作,提供更高层次的接口</p>
+</li>
+<li>
+<p><code>dbsop_assist.h</code><br>
+数据库操作相关的一系列结构和类，包括数据库连接信息、查询类型、用户数据标记、查询请求和响应、查询内存池以及数据库性能信息</p>
+<pre class="language-text">  结构体 tagDBConnectInfo，用于存储数据库连接信息，包括服务器名称、端口、数据库名称、用户名和密码。
+  结构体 TMysqlQuest，用于封装MySQL查询任务。
+
+  类 CsqlstringRequest，用于封装MySQL查询请求和响应。
+  类 CRequestPool 和 CSqlReqPoolMg，用于管理查询请求的内存池。
+  类 CSysLog_DBInfo，用于生成数据库的性能信息。
+  类 CHashInfo，用于管理需要哈希的表。
+
+  枚举类型 EmDbopQueryType，表示数据库操作的类型，包括读取玩家数据、创建昵称、插入新角色等。
+  枚举类型 emUserDataMark，用于标记用户基本数据的修改类型。
+</pre>
+</li>
+</ul>
+<h1 id="3-其他">3. 其他 </h1>
+<h2 id="review">Review </h2>
+<h3 id="可优化代码">可优化代码 </h3>
+<p>变量计数，++遗漏<br>
+功能异常处，错误日志遗漏<br>
+实现逻辑错误</p>
+<h3 id="审查原则">审查原则 </h3>
+<ul>
+<li><strong>优化要点</strong>：重复代码、长逻辑链、低效代码、不合理结构、并发问题、复杂继承、安全漏洞、缺乏设计、过早优化、奇技淫巧。</li>
+<li><strong>代码风格</strong>：符合规范，目录结构合理。</li>
+<li><strong>逻辑功能</strong>：满足需求，无理解偏差，逻辑清晰，遵循KISS和DRY。</li>
+<li><strong>程序设计</strong>：分层清晰，模块化，高内聚低耦合，全局设计考虑，交互恰当，技术组件选用合理。</li>
+<li><strong>性能优化</strong>：算法高效，资源管理正确。</li>
+<li><strong>程序漏洞</strong>：处理边界条件、并发、输入验证、错误异常、数据加密、权限控制、内存安全。</li>
+<li><strong>注释文档</strong>：提供合适注释和文档。</li>
+<li><strong>日志监控</strong>：日志合理，信息完整，敏感数据监控。</li>
+<li><strong>测试</strong>：单元测试和集成测试覆盖，便于自动化。</li>
+<li><strong>团队协作</strong>：提交规范，充分测试审查，及时响应反馈。</li>
+</ul>
+<h2 id="gochat">gochat </h2>
+<p>收发图片功能</p>
+<p><img src="file:///d:\company\Online\绩效\241115新人培养计划 - 服务器 - 文家宝 - 第5周工作总结\QQ%E6%88%AA%E5%9B%BE20241115144406.png" alt="alt text"></p>
+<h1 id="上周问题">上周问题 </h1>
+<h2 id="协议序列化">协议序列化 </h2>
+<h3 id="原理">原理 </h3>
+<ul>
+<li>协议的作用</li>
+</ul>
+<ol>
+<li><strong>数据断句</strong>：RPC 需要将对象序列化成二进制数据，协议用于标识请求数据的结束位置，即消息边界。</li>
+<li><strong>数据识别</strong>：服务提供方需要从 TCP 通道中识别出哪些二进制数据属于第一个请求。</li>
+<li><strong>避免语义不一致</strong>：通过设定边界，避免数据合并或拆分导致的错误。</li>
+</ol>
+<ul>
+<li>协议的设计</li>
+</ul>
+<ol>
+<li><strong>性能要求</strong>：RPC 需要高性能，HTTP 协议由于数据包大小和无状态特性，不适合 RPC。</li>
+<li><strong>固定部分与协议头长度</strong>：设计支持扩展的协议，包括固定部分和协议头长度，以支持平滑升级。</li>
+<li><strong>协议头与协议体内容</strong>：协议头包含长度和序列化方式，协议体包含请求和扩展属性。</li>
+<li><strong>二进制传输</strong>：网络传输需要二进制数据，对象需要转换为二进制。</li>
+<li><strong>可逆过程</strong>：序列化是可逆的，服务提供方可以根据请求类型和序列化类型还原对象。</li>
+</ol>
+<ul>
+<li>JSON</li>
+</ul>
+<ol>
+<li><strong>文本型序列化框架</strong>：典型的 key-value 方式，没有数据类型。</li>
+<li><strong>问题</strong>：额外空间开销大，没有类型信息，需要反射。</li>
+</ol>
+<ul>
+<li>Protobuf</li>
+</ul>
+<ol>
+<li><strong>轻便、高效</strong>：Google 的数据标准，支持多种语言。</li>
+<li><strong>IDL 定义</strong>：使用 IDL 定义数据结构，生成序列化工具类。</li>
+</ol>
+<ul>
+<li>RPC 框架使用注意事项</li>
+</ul>
+<ol>
+<li><strong>对象构造复杂</strong>：避免属性多、嵌套深的对象。</li>
+<li><strong>对象过于庞大</strong>：避免大 List 或 Map，影响性能和请求耗时。</li>
+<li><strong>序列化框架不支持的类</strong>：选择原生、常用的集合类。</li>
+<li><strong>复杂的继承关系</strong>：避免复杂的继承关系，影响性能和序列化问题。</li>
+</ol>
+<h3 id="实现-1">实现 </h3>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-static">static</span> <span class="token keyword keyword-bool">bool</span> <span class="token function">PackNetMsg</span><span class="token punctuation">(</span>PbWarpMsg<span class="token operator">*</span> pTempMsg<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> msg_id<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> google<span class="token double-colon punctuation">::</span>protobuf<span class="token double-colon punctuation">::</span>Message<span class="token operator">&amp;</span> msg<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> user_id <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> UINT64 seqid <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pTempMsg<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-auto">auto</span> pbLen <span class="token operator">=</span> msg<span class="token punctuation">.</span><span class="token function">ByteSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    pTempMsg<span class="token operator">-&gt;</span>OPCode <span class="token operator">=</span> msg_id<span class="token punctuation">;</span>
+    pTempMsg<span class="token operator">-&gt;</span>Len <span class="token operator">=</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span> <span class="token operator">+</span> pbLen<span class="token punctuation">;</span>
+    pTempMsg<span class="token operator">-&gt;</span>user_id <span class="token operator">=</span> user_id<span class="token punctuation">;</span>
+    pTempMsg<span class="token operator">-&gt;</span>MsgType <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    pTempMsg<span class="token operator">-&gt;</span>SeqId <span class="token operator">=</span> seqid<span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>msg<span class="token punctuation">.</span><span class="token function">SerializePartialToArray</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>pTempMsg<span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span><span class="token punctuation">,</span> pbLen<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">APPLOG_ERROR</span><span class="token punctuation">(</span><span class="token string">"Serialize 错误!"</span> <span class="token operator">&lt;&lt;</span> FUN_FILE_LINE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>使用Protocol Buffers库来序列化消息.PackNetMsg 函数只负责打包消息.SendNetMsg 函数不仅打包消息，还负责发送:</p>
+<ol>
+<li>使用 CSgsAllocXBlockMg::single()-&gt;malloc 分配内存，大小为 PbWarpMsg 结构体的大小加上消息的字节大小。</li>
+<li>使用 CAutoCallFun 对象确保在函数结束时自动释放内存。</li>
+<li>设置 PbWarpMsg 结构体的各个字段，包括操作码 OPCode、长度 Len、用户ID user_id、消息类型 MsgType 和序列号 SeqId。</li>
+<li>使用 SerializePartialToArray 方法将 msg 序列化到分配的内存中。</li>
+<li>调用 INiceNet::Instance().SendMsg 发送消息。</li>
+</ol>
+<h2 id="ants">ants </h2>
+<h3 id="原理-1">原理 </h3>
+<p>Golang 的协程池，两个goroutine</p>
+<ul>
+<li>goworker 的 run 的 goruotine，for 循环中不断获取任务执行</li>
+<li>业务 submit goroutine，不断投递任务。submit 投递的时候，一旦达到了容量，就使用 wait 阻塞住，或者返回已经过载的错误</li>
+</ul>
+<p><img src="file:///d:\company\Online\绩效\241115新人培养计划 - 服务器 - 文家宝 - 第5周工作总结\ants.svg" alt="alt text"></p>
+<ol>
+<li>
+<p>使用 sync.Pool 初始化 goworker<br>
+Q：goWorker 的初始化、回收是一个非常频繁的动作，这种动作消耗非常大<br>
+A：使用对象池 sync.Pool 来优化初始化。这样这种大量的获取回收 worker 的行为可以直接从 pool 中获取，降低内存的消耗回收</p>
+</li>
+<li>
+<p>goWorker 的存取同时支持队列和栈方式</p>
+<ul>
+<li>预先分配：如果设置了 PreAlloc，则使用循环队列（loopQueue）的方式存取这个 workers。在初始化 pool 的时候，就初始化了 capacity 长度的循环队列，取的时候从队头取，插入的时候往队列尾部插入，整体 queue 保持在 capacity 长度。</li>
+<li>用时分配：如果没有设置 PreAlloc，则使用堆栈（stack）的方式存取这个 workers。初始化的时候不初始化任何的 worker，在第一次取的时候在 stack 中取不到，则会从 sync.Pool 中初始化并取到对象，然后使用完成后插入到 当前这个栈中。下次取就直接从 stack 中再获取了。</li>
+</ul>
+</li>
+<li>
+<p>自定义自旋锁<br>
+遵循指数退避（Exponential Backoff）策略，取锁频率递减</p>
+</li>
+<li>
+<p>时间戳使用 ticker 来更新<br>
+避免频繁使用 time.Now()对底层负荷过大</p>
+</li>
+<li>
+<p>无序执行<br>
+ants 并不保证提交的任务被执行的顺序，执行的顺序也不是和提交的顺序保持一致，因为在 ants 是并发地处理所有提交的任务，提交的任务会被分派到正在并发运行的 workers 上去，因此那些任务将会被并发且无序地被执行</p>
+</li>
+</ol>
+<h3 id="实现-2">实现 </h3>
+<p>实现了一个基于ants库的任务管理器，可以管理和调度异步任务。支持不带用户信息和带用户信息的任务处理，并提供任务的提交和停止功能</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>AntsManager<span class="token punctuation">)</span> <span class="token function">Post</span><span class="token punctuation">(</span>f AntsTaskHandle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    p<span class="token punctuation">.</span>wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>a<span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>AntsTaskInfo<span class="token punctuation">{</span>F<span class="token punctuation">:</span> f<span class="token punctuation">,</span> T<span class="token punctuation">:</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>AntsManager<span class="token punctuation">)</span> <span class="token function">PostGetUser</span><span class="token punctuation">(</span>acc <span class="token builtin">string</span><span class="token punctuation">,</span> f AntsTaskHandleWithUser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    p<span class="token punctuation">.</span>wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>a<span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>AntsTaskInfo<span class="token punctuation">{</span>FU<span class="token punctuation">:</span> f<span class="token punctuation">,</span> T<span class="token punctuation">:</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> A<span class="token punctuation">:</span> acc<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="应用">应用 </h3>
+<p>任务处理，进入协程池。由于ants无序执行，因此要数据加锁</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>antsMgr<span class="token punctuation">.</span><span class="token function">PostGetUser</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span>Acc<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>t <span class="token builtin">int64</span><span class="token punctuation">,</span> userinfo <span class="token operator">*</span>dbs<span class="token punctuation">.</span>WxUserBrief<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+    <span class="token comment">//获得当前活动数据</span>
+    actData<span class="token punctuation">,</span> err <span class="token operator">:=</span> treasureMgr<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"Treasure Load %d %d Error"</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">)</span>
+        resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> ccproto<span class="token punctuation">.</span>Treasure_result_err_unknown
+        <span class="token keyword keyword-return">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-if">if</span> actData <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token operator">||</span> actData<span class="token punctuation">.</span>Version <span class="token operator">!=</span> TreasureDataVer <span class="token punctuation">{</span>
+        actData <span class="token operator">=</span> <span class="token operator">&amp;</span>db<span class="token punctuation">.</span>DBActTreasureData<span class="token punctuation">{</span>ActId<span class="token punctuation">:</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">,</span> Uid<span class="token punctuation">:</span> msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> Version<span class="token punctuation">:</span> TreasureDataVer<span class="token punctuation">}</span>
+        resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> treasureMgr<span class="token punctuation">.</span><span class="token function">ResetRound</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> actData<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> <span class="token number">0</span> <span class="token operator">!=</span> resp<span class="token punctuation">.</span>Result <span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    treasureMgr<span class="token punctuation">.</span><span class="token function">FillNtf</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> actData<span class="token punctuation">,</span> resp<span class="token punctuation">,</span> userinfo<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+  </html>

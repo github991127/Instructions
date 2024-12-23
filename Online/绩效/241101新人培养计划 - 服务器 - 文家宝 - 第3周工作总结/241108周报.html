@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>241108周报</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\wenjiabao\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.14\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: 'vivo Sans';
+  font-size: 18px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><html><head><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body></body></html>
+    </head>
+    <body for="html-export" >
+      <div class="crossnote markdown-preview  "  >
+      
+<ul>
+<li><a href="#1-golang%E6%A1%86%E6%9E%B6">1. Golang框架</a>
+<ul>
+<li><a href="#%E6%9C%8D%E5%8A%A1">服务</a>
+<ul>
+<li><a href="#%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%85%A5">网络接入</a>
+<ul>
+<li><a href="#main">main</a></li>
+<li><a href="#newapplication">NewApplication</a></li>
+<li><a href="#init">Init</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C">服务注册</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0">服务发现</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%86%85%E5%AE%B9">服务内容</a></li>
+</ul>
+</li>
+<li><a href="#activity">activity</a>
+<ul>
+<li><a href="#%E7%BF%BB%E7%BF%BB%E4%B9%90">翻翻乐</a>
+<ul>
+<li><a href="#%E5%A4%84%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82-%E6%A1%86%E6%9E%B6">处理客户端请求-框架</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82-%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91">处理客户端请求-实现逻辑</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#rogue">rogue</a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96">初始化</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82-%E6%A1%86%E6%9E%B6-1">处理客户端请求-框架</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82-%E9%80%BB%E8%BE%91">处理客户端请求-逻辑</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B">2. 开发流程</a>
+<ul>
+<li><a href="#%E5%8D%8F%E8%AE%AE-go">协议-go</a>
+<ul>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8">协议定义与使用</a></li>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8-pb">协议定义与使用-pb</a></li>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%AE%9E%E7%8E%B0">协议实现</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE-go">配置-go</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0">使用实现</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8D%8F%E8%AE%AE-cpp">协议-cpp</a>
+<ul>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8-1">协议定义与使用</a></li>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8-pb-1">协议定义与使用-pb</a></li>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E7%B1%BB%E5%9E%8B%E5%A4%84%E7%90%86">协议类型处理</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE-cpp">配置-cpp</a>
+<ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86-1">加载管理</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E7%8E%B0-1">使用实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-jira%E6%AD%A6%E5%B0%86%E6%96%87%E6%A1%A3">3. jira武将文档</a>
+<ul>
+<li><a href="#%E6%B5%B7%E5%9D%8A%E4%B8%BBboss">海坊主BOSS</a>
+<ul>
+<li><a href="#%E6%9A%B4%E9%9B%A8">暴雨</a></li>
+</ul>
+</li>
+<li><a href="#%E6%97%A0%E5%90%8Dboss">无名BOSS</a>
+<ul>
+<li><a href="#%E5%88%97%E9%98%B5">列阵</a></li>
+</ul>
+</li>
+<li><a href="#%E7%8E%8B%E6%98%B6">王昶</a>
+<ul>
+<li><a href="#%E5%BC%80%E6%B5%8E">开济</a></li>
+</ul>
+</li>
+<li><a href="#%E7%8E%8B%E5%8C%A1">王匡</a>
+<ul>
+<li><a href="#%E4%BB%BB%E4%BE%A0">任侠</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-go%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%AE%9E%E7%8E%B0">4. go聊天室实现</a></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h1 id="1-golang框架">1. Golang框架 </h1>
+<h2 id="服务">服务 </h2>
+<p>例：<code>rogue</code></p>
+<h3 id="网络接入">网络接入 </h3>
+<h4 id="main">main </h4>
+<p><code>cmd/rogue/main.go</code></p>
+<ul>
+<li>配置文件路径设置： <code>app_conf_path</code> 下的 <code>cs_config.ini</code>。</li>
+<li>创建一个新的应用程序实例。设置应用程序配置路径，游戏数据路径，AI数据路径。</li>
+<li>运行应用程序。</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app <span class="token operator">:=</span> ccframe<span class="token punctuation">.</span><span class="token function">NewApplication</span><span class="token punctuation">(</span><span class="token operator">*</span>csConfig<span class="token punctuation">,</span> <span class="token string">"Svr-"</span><span class="token operator">+</span><span class="token operator">*</span>appName<span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>AppConfPath <span class="token operator">=</span> <span class="token operator">*</span>app_conf_path
+    app<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>GameDataPath <span class="token operator">=</span> <span class="token operator">*</span>game_data_path
+    app<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>AiDataPath <span class="token operator">=</span> <span class="token operator">*</span>ai_data_path
+
+    err <span class="token operator">:=</span> rogue<span class="token punctuation">.</span><span class="token function">Init</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+
+    app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="newapplication">NewApplication </h4>
+<p><code>app.go</code></p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token function">NewApplication</span><span class="token punctuation">(</span>csConfigFile <span class="token builtin">string</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">*</span>Application
+</code></pre><ol>
+<li>
+<p>解析配置文件<br>
+使用 <code>metanet.ParseAppConfig</code> 函数解析配置文件，获取应用配置。如果解析失败，则打印错误信息并退出程序。</p>
+</li>
+<li>
+<p>初始化 Application 对象<br>
+初始化 <code>Application</code> 对象的各个字段，包括名称、ID、服务器类型、配置信息等。</p>
+</li>
+<li>
+<p>初始化日志，记录应用启动信息<br>
+如果未禁用全局日志初始化，则配置并初始化日志系统。<br>
+使用日志记录器记录应用启动信息。</p>
+</li>
+<li>
+<p>初始化网络服务</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>a<span class="token punctuation">.</span>svrEventHandlers <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword keyword-map">map</span><span class="token punctuation">[</span><span class="token builtin">uint32</span><span class="token punctuation">]</span>SvrEventHandler<span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>worker <span class="token operator">=</span> ioservice<span class="token punctuation">.</span><span class="token function">NewIOService</span><span class="token punctuation">(</span>fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">"app_%s_main"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">102400</span><span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>worker<span class="token punctuation">.</span><span class="token function">Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><p>初始化服务事件处理器和网络 I/O 服务。</p>
+<ol start="5">
+<li>初始化请求客户端</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>a<span class="token punctuation">.</span>reqc <span class="token operator">=</span> protoreq<span class="token punctuation">.</span><span class="token function">NewClient</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>Post<span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>reqc<span class="token punctuation">.</span>OnNotFind <span class="token operator">=</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>seqid <span class="token builtin">int64</span><span class="token punctuation">,</span> resp <span class="token keyword keyword-interface">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+logger <span class="token operator">:=</span> logrus<span class="token punctuation">.</span><span class="token function">WithField</span><span class="token punctuation">(</span><span class="token string">"seqid"</span><span class="token punctuation">,</span> seqid<span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+logger<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Warn</span><span class="token punctuation">(</span><span class="token string">"Resp not find "</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+logger<span class="token punctuation">.</span><span class="token function">WithField</span><span class="token punctuation">(</span><span class="token string">"respType"</span><span class="token punctuation">,</span> reflect<span class="token punctuation">.</span><span class="token function">TypeOf</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Warn</span><span class="token punctuation">(</span><span class="token string">"Resp not find "</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">.</span>respMsgMap <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword keyword-map">map</span><span class="token punctuation">[</span><span class="token builtin">uint32</span><span class="token punctuation">]</span><span class="token builtin">bool</span><span class="token punctuation">)</span>
+</code></pre><p>初始化请求客户端，并设置请求未找到时的回调函数。</p>
+<ol start="6">
+<li>初始化网络</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>a<span class="token punctuation">.</span>net <span class="token operator">=</span> metanet<span class="token punctuation">.</span><span class="token function">NewMetaNet</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>net<span class="token punctuation">.</span><span class="token function">Init</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">,</span> a<span class="token punctuation">.</span>worker<span class="token punctuation">)</span>
+</code></pre><p>初始化网络对象，并设置网络事件监听器，包括连接、关闭、工作线程退出和写错误等事件。</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-type">type</span> MetaNet <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 配置</span>
+    Config <span class="token operator">*</span>AppConfig
+    <span class="token comment">// 事件</span>
+    io ioservice<span class="token punctuation">.</span>IOService
+    <span class="token comment">// 消息管理</span>
+    connectHandler OnNetConnect
+    closeHandler   OnNetClose
+    bytesHandler   OnNetBytes
+    errorHandle    OnWriteError
+    WorkerExitHandler OnWorkerExit
+    <span class="token comment">// 服务和客户端</span>
+    NetMutex sync<span class="token punctuation">.</span>Mutex
+    Clients  <span class="token keyword keyword-map">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">*</span>MetaClient
+    Server   <span class="token operator">*</span>MetaServer
+    ID2ConnItem   <span class="token keyword keyword-map">map</span><span class="token punctuation">[</span><span class="token builtin">uint32</span><span class="token punctuation">]</span><span class="token operator">*</span>ConnItem
+    Conn2ConnItem <span class="token keyword keyword-map">map</span><span class="token punctuation">[</span>Connection<span class="token punctuation">]</span><span class="token operator">*</span>ConnItem
+    <span class="token operator">*</span>MsgHandlers
+<span class="token punctuation">}</span>
+</code></pre><ol start="7">
+<li>启动本地服务器</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>svrConfig <span class="token operator">:=</span> <span class="token operator">&amp;</span>metanet<span class="token punctuation">.</span>ServerConfig<span class="token punctuation">{</span>
+ServerID<span class="token punctuation">:</span>      appConfig<span class="token punctuation">.</span>ServerID<span class="token punctuation">,</span>
+ServerType<span class="token punctuation">:</span>    appConfig<span class="token punctuation">.</span>ServerType<span class="token punctuation">,</span>
+Name<span class="token punctuation">:</span>          fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span>
+ListenAddr<span class="token punctuation">:</span>    <span class="token string">":"</span> <span class="token operator">+</span> strconv<span class="token punctuation">.</span><span class="token function">Itoa</span><span class="token punctuation">(</span><span class="token function">int</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span>ListenPort<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+DisableCrypto<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-if">if</span> a<span class="token punctuation">.</span>net<span class="token punctuation">.</span><span class="token function">Listen</span><span class="token punctuation">(</span>svrConfig<span class="token punctuation">,</span> a<span class="token punctuation">.</span>StartTime<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-return">return</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+</code></pre><ol start="8">
+<li>连接到中心服务器</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>csConf <span class="token operator">:=</span> <span class="token operator">&amp;</span>metanet<span class="token punctuation">.</span>ClientConfig<span class="token punctuation">{</span>
+ServerID<span class="token punctuation">:</span>    appConfig<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>ServerID<span class="token punctuation">,</span>
+ServerType<span class="token punctuation">:</span>  <span class="token function">uint32</span><span class="token punctuation">(</span>CenterServer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+Name<span class="token punctuation">:</span>        strconv<span class="token punctuation">.</span><span class="token function">Itoa</span><span class="token punctuation">(</span><span class="token function">int</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>ServerID<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ConnectAddr<span class="token punctuation">:</span> appConfig<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>Net_listenip <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> strconv<span class="token punctuation">.</span><span class="token function">Itoa</span><span class="token punctuation">(</span><span class="token function">int</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span>CsConf<span class="token punctuation">.</span>Net_listenport<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">.</span>net<span class="token punctuation">.</span><span class="token function">Connect</span><span class="token punctuation">(</span>csConf<span class="token punctuation">,</span> a<span class="token punctuation">.</span>StartTime<span class="token punctuation">)</span>
+</code></pre><h4 id="init">Init </h4>
+<p><code>rogue.go</code></p>
+<ol>
+<li>
+<p><strong>数据库连接</strong>：</p>
+<ul>
+<li>使用<code>gameutil.OpenDBWithMaxMinConn</code>函数打开数据库连接，设置最大和最小连接数。</li>
+</ul>
+</li>
+<li>
+<p><strong>缓存配置</strong>：</p>
+<ul>
+<li>创建一个<code>map[string]*config.RedisConfig</code>类型的变量<code>cfg</code>，用于存储不同类型的Redis配置。</li>
+<li>为每种类型的Redis配置（如<code>user</code>、<code>backup</code>、<code>invite</code>等）设置最大连接数、地址、密码和最大空闲连接数。</li>
+<li>初始化<code>cacheMgr</code>并传入配置信息。</li>
+</ul>
+</li>
+<li>
+<p><strong>初始化管理</strong>：</p>
+<ul>
+<li>初始化任务管理器<code>antsMgr</code>，用于管理任务。</li>
+<li>创建配置管理<code>confMgr</code>，用于加载和管理游戏配置。</li>
+<li>加载多个配置文件，如<code>character.xml</code>。</li>
+<li>初始化用户管理<code>userMgr</code>，用于管理用户。</li>
+<li>初始化排行榜管理<code>rogueRankData</code>，用于存储排行榜数据。</li>
+</ul>
+</li>
+<li>
+<p><strong>消息监听</strong>：</p>
+<ul>
+<li>监听各种消息和服务器事件，如<code>ccproto.SS_SS_GM_CMD_NTF</code>、<code>metanet.CS_Notice_NewServerStartUp</code>等。</li>
+<li>根据不同的事件类型执行相应的操作，如连接到新的服务器、处理数据库断开连接等。</li>
+</ul>
+</li>
+<li>
+<p><strong>定时任务</strong>：</p>
+<ul>
+<li>创建<code>cronMgr</code>，用于管理定时任务。</li>
+<li>添加每隔10秒和每分钟执行的任务，启动定时任务。</li>
+</ul>
+</li>
+<li>
+<p><strong>运行应用</strong>：</p>
+<ul>
+<li>调用<code>Run</code>函数，开始运行应用。</li>
+</ul>
+</li>
+</ol>
+<h3 id="服务注册">服务注册 </h3>
+<ol>
+<li>
+<p><strong>初始化 <code>Application</code> 对象</strong><br>
+详见<a href="#newapplication">NewApplication</a></p>
+</li>
+<li>
+<p><strong>启动一个服务器</strong></p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>metanet<span class="token punctuation">.</span><span class="token keyword keyword-go">go</span>
+<span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>net <span class="token operator">*</span>MetaNet<span class="token punctuation">)</span> <span class="token function">Listen</span><span class="token punctuation">(</span>config <span class="token operator">*</span>ServerConfig<span class="token punctuation">,</span> startTime <span class="token builtin">int64</span><span class="token punctuation">)</span> <span class="token operator">*</span>MetaServer
+</code></pre><ul>
+<li>线程安全：加锁</li>
+<li>空检查：io字段</li>
+<li>重复检查：<code>MetaNet</code>实例</li>
+<li>配置文件：<code>bin/cs_config-sample.ini</code></li>
+</ul>
+<ol start="3">
+<li><strong>创建一个通用的服务器实例</strong>
+<ol>
+<li>
+<p>创建MetaServer实例</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>s <span class="token operator">:=</span> <span class="token function">new</span><span class="token punctuation">(</span>MetaServer<span class="token punctuation">)</span>
+</code></pre><p>创建一个新的<code>MetaServer</code>实例。</p>
+</li>
+<li>
+<p>初始化MetaServer的字段</p>
+</li>
+<li>
+<p>定义连接和关闭处理函数</p>
+<ul>
+<li><code>fconnect</code>: 当连接建立时，启动一个定时器，如果超时则关闭连接。</li>
+<li><code>fclose</code>: 当连接关闭时，停止定时器并从<code>heartCheckTimers</code>中删除该连接。</li>
+</ul>
+</li>
+<li>
+<p>创建打包器和处理器MetaPackager和MetaProcessor</p>
+</li>
+<li>
+<p>设置MetaProcessor的处理函数</p>
+</li>
+<li>
+<p>创建TCPServer</p>
+</li>
+</ol>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>meta_server<span class="token punctuation">.</span><span class="token keyword keyword-go">go</span>
+<span class="token keyword keyword-func">func</span> <span class="token function">NewCommonServer</span><span class="token punctuation">(</span>appConfig <span class="token operator">*</span>AppConfig<span class="token punctuation">,</span> serverConfig <span class="token operator">*</span>ServerConfig<span class="token punctuation">,</span> io ioservice<span class="token punctuation">.</span>IOService<span class="token punctuation">,</span>
+    connectHandler ServerConnectHandler<span class="token punctuation">,</span> closeHandler CloseHandler<span class="token punctuation">,</span>
+    bytesHandler BytesHandler<span class="token punctuation">,</span> errorHandle WriteErrorHandler<span class="token punctuation">,</span> msgHandlers GetMsgHandler<span class="token punctuation">,</span> exitHandler WorkerExitHandler<span class="token punctuation">,</span> appStartTime <span class="token builtin">int64</span><span class="token punctuation">,</span>
+    msgServerReqHeartBeatHandler MsgHandler<span class="token punctuation">)</span> <span class="token operator">*</span>MetaServer 
+</code></pre><h3 id="服务发现">服务发现 </h3>
+<p><code>app.go</code></p>
+<ul>
+<li>
+<p><code>GetServer</code> 和 <code>GetAvailableServer</code>：获取服务器实例。</p>
+</li>
+<li>
+<p><code>GetAvailableServerIDs</code>：获取所有可用的服务节点ID。</p>
+</li>
+<li>
+<p><code>GetServerType</code> 和 <code>IsServerAvailable</code>：获取服务器类型和检查服务器是否可用。</p>
+</li>
+<li>
+<p><code>OnExitHandler</code> 和 <code>OnFiniHandler</code>：设置应用程序退出时的回调函数。</p>
+</li>
+<li>
+<p><code>Post</code> 和 <code>TryPost</code>：将任务派发到服务中执行。</p>
+</li>
+<li>
+<p><code>AfterPost</code>：在指定时间后，将任务派发到服务中执行。</p>
+</li>
+<li>
+<p><code>ListenServerEvent</code>：监听服务器事件。</p>
+</li>
+<li>
+<p><code>ListenMsg</code> 和 <code>ListenRequest</code>：监听消息和请求。</p>
+</li>
+<li>
+<p><code>RegisterResponse</code>：注册响应消息。</p>
+</li>
+</ul>
+<h3 id="服务内容">服务内容 </h3>
+<table>
+<thead>
+<tr>
+<th>ServerType</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ErrorServer</td>
+<td>错误服务器</td>
+</tr>
+<tr>
+<td>LoginServer</td>
+<td>登录服务器</td>
+</tr>
+<tr>
+<td>GameServer</td>
+<td>游戏服务器</td>
+</tr>
+<tr>
+<td>MySQLServer</td>
+<td>MySQL数据库服务器</td>
+</tr>
+<tr>
+<td>ShopServer</td>
+<td>商店服务器</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>网关服务器</td>
+</tr>
+<tr>
+<td>FriendServer</td>
+<td>好友服务器</td>
+</tr>
+<tr>
+<td>CenterServer</td>
+<td>中心服务器</td>
+</tr>
+<tr>
+<td>MonitorServer</td>
+<td>监控服务器</td>
+</tr>
+<tr>
+<td>SupportServer</td>
+<td>支持服务器</td>
+</tr>
+<tr>
+<td>ImPostServer</td>
+<td>IM中转服务</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>客户端</td>
+</tr>
+<tr>
+<td>WebService</td>
+<td>web服务</td>
+</tr>
+<tr>
+<td>HaoFangSvr</td>
+<td>好友房服务器</td>
+</tr>
+<tr>
+<td>OpcTool</td>
+<td>工具服务器</td>
+</tr>
+<tr>
+<td>BfSgsBsipSvr</td>
+<td>sgs服务器</td>
+</tr>
+<tr>
+<td>PhoneShopSvr</td>
+<td>手机商店服务器</td>
+</tr>
+<tr>
+<td>FcmServer</td>
+<td>FirebaseCloudMessaging</td>
+</tr>
+<tr>
+<td>RankServer</td>
+<td>排名服务器</td>
+</tr>
+<tr>
+<td>GuildServer</td>
+<td>公会服务器</td>
+</tr>
+<tr>
+<td>LogServer</td>
+<td>日志服务器</td>
+</tr>
+<tr>
+<td>StatsServer</td>
+<td>数据统计服务器</td>
+</tr>
+<tr>
+<td>AIServer</td>
+<td>AI服务器</td>
+</tr>
+<tr>
+<td>ViewServer</td>
+<td>旁观服务器</td>
+</tr>
+<tr>
+<td>SBMServer</td>
+<td>比赛服务器</td>
+</tr>
+<tr>
+<td>CustomLobbyServer</td>
+<td>自定义游戏大厅服务器</td>
+</tr>
+<tr>
+<td>CustomGameServer</td>
+<td>自定义游戏服务器</td>
+</tr>
+<tr>
+<td>WebFcmServer</td>
+<td>web防沉迷服务器</td>
+</tr>
+<tr>
+<td>AdminServer</td>
+<td>管理服务器</td>
+</tr>
+<tr>
+<td>CApiServer</td>
+<td>CAPI服务器</td>
+</tr>
+<tr>
+<td>ActServer</td>
+<td>活动服务器</td>
+</tr>
+<tr>
+<td>OrderServer</td>
+<td>订单服务器</td>
+</tr>
+<tr>
+<td>EntityServer</td>
+<td>实体服务器</td>
+</tr>
+<tr>
+<td>TableServer</td>
+<td>表格服务器</td>
+</tr>
+<tr>
+<td>RecommendServer</td>
+<td>推荐服务器</td>
+</tr>
+<tr>
+<td>AIAgentServer</td>
+<td>AI代理服务器</td>
+</tr>
+<tr>
+<td>ActRogueServer</td>
+<td>活动rogue服务器</td>
+</tr>
+<tr>
+<td>MatchServer</td>
+<td>匹配服务器</td>
+</tr>
+<tr>
+<td>PlanServer</td>
+<td>计划服务器</td>
+</tr>
+<tr>
+<td>HttpServer</td>
+<td>HTTP服务器</td>
+</tr>
+<tr>
+<td>CompServer</td>
+<td>竞赛服务器</td>
+</tr>
+<tr>
+<td>KVServer</td>
+<td>键值存储服务器</td>
+</tr>
+<tr>
+<td>PayServer</td>
+<td>充值回调服务</td>
+</tr>
+<tr>
+<td>ServiceMax</td>
+<td>服务最大值（枚举结束值）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="activity">activity </h2>
+<h3 id="翻翻乐">翻翻乐 </h3>
+<h4 id="处理客户端请求-框架">处理客户端请求-框架 </h4>
+<p><code>activity/treasure_handle.go</code></p>
+<pre class="language-text">CLIENT_TREASURE_INFO_REQ   = 26401 //请求信息
+CLIENT_TREASURE_INFO_RESET = 26402 //重置
+CLIENT_TREASURE_OPEN_REQ   = 26403 //开卡
+CLIENT_TREASURE_GIFT_REQ   = 26404 //商店领取免费道具
+</pre>
+<p>注册4个消息监听器，当接收到指定类型的消息时，触发处理函数，参数包括消息发送者sender、消息序列号seqId和消息内容_msg</p>
+<ul>
+<li>请求信息</li>
+</ul>
+<ol>
+<li>
+<p><strong>消息监听</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>app<span class="token punctuation">.</span><span class="token function">ListenMsg</span><span class="token punctuation">(</span>ccproto<span class="token punctuation">.</span>CLIENT_TREASURE_INFO_REQ<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>sender ccframe<span class="token punctuation">.</span>Server<span class="token punctuation">,</span> seqId <span class="token builtin">int64</span><span class="token punctuation">,</span> _msg metanet<span class="token punctuation">.</span>Message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</code></pre><p>注册了消息监听器，当接收到<code>ccproto.CLIENT_TREASURE_INFO_REQ</code>类型的消息时，会触发这个回调函数。</p>
+</li>
+<li>
+<p><strong>获取用户会话</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>u<span class="token punctuation">,</span> ok <span class="token operator">:=</span> userMgr<span class="token punctuation">.</span><span class="token function">GetSession</span><span class="token punctuation">(</span>_msg<span class="token punctuation">.</span><span class="token function">GetUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> <span class="token operator">!</span>ok <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">Debugf</span><span class="token punctuation">(</span><span class="token string">"user[%d] not online"</span><span class="token punctuation">,</span> _msg<span class="token punctuation">.</span><span class="token function">GetUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+</code></pre><p>通过消息中的用户ID获取用户的会话信息，如果用户不在线，返回。</p>
+</li>
+<li>
+<p><strong>异步任务处理</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>antsMgr<span class="token punctuation">.</span><span class="token function">PostGetUser</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span>Acc<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>t <span class="token builtin">int64</span><span class="token punctuation">,</span> userinfo <span class="token operator">*</span>dbs<span class="token punctuation">.</span>WxUserBrief<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</code></pre><p>使用<code>antsMgr</code>异步获取用户信息，<code>PostGetUser</code>方法会异步执行</p>
+</li>
+<li>
+<p><strong>消息类型检查</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>msg<span class="token punctuation">,</span> ok <span class="token operator">:=</span> _msg<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token operator">*</span>ccproto<span class="token punctuation">.</span>ClientTreasureReq<span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> <span class="token operator">!</span>ok <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+</code></pre><p>断言检查：消息类型是否为<code>ccproto.ClientTreasureReq</code></p>
+</li>
+<li>
+<p><strong>响应消息初始化</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>resp <span class="token operator">:=</span> <span class="token operator">&amp;</span>ccproto<span class="token punctuation">.</span>ClientTreasureNTF<span class="token punctuation">{</span><span class="token punctuation">}</span>
+resp<span class="token punctuation">.</span>User_id <span class="token operator">=</span> msg<span class="token punctuation">.</span>User_id
+<span class="token keyword keyword-defer">defer</span> sender<span class="token punctuation">.</span><span class="token function">SendMsg</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
+</code></pre><p>初始化响应消息，并设置用户ID，<code>defer</code>发送响应消息。</p>
+</li>
+<li>
+<p><strong>时间检查</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>now <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> t <span class="token operator">&lt;</span> now <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>now<span class="token operator">-</span>t<span class="token punctuation">)</span> <span class="token operator">&gt;</span> manager<span class="token punctuation">.</span>AntsTaskWaitTimeout <span class="token punctuation">{</span>
+    resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> ccproto<span class="token punctuation">.</span>Treasure_result_err_busy
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+</code></pre><p>界限检查：当前时间与任务时间的关系，是否超时。</p>
+</li>
+<li>
+<p><strong>活动信息检查</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>cur <span class="token operator">:=</span> treasureMgr<span class="token punctuation">.</span><span class="token function">CheckCurAct</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> cur <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">//ccproto.Treasure_result_err_id</span>
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+</code></pre><p>功能检查：当前活动是否存在。</p>
+</li>
+<li>
+<p><strong>用户活动锁定</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>lock<span class="token punctuation">,</span> err <span class="token operator">:=</span> cacheMgr<span class="token punctuation">.</span><span class="token function">TryLockUserAct</span><span class="token punctuation">(</span>treasureMgr<span class="token punctuation">.</span>actType<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> ccproto<span class="token punctuation">.</span>Treasure_result_err_userbusy
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-defer">defer</span> cacheMgr<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span>lock<span class="token punctuation">)</span>
+</code></pre><p>锁定用户活动，防止并发操作，如果锁定失败则设置错误结果并返回。<code>defer</code>解锁。</p>
+</li>
+<li>
+<p><strong>加载活动数据</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>actData<span class="token punctuation">,</span> err <span class="token operator">:=</span> treasureMgr<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"Treasure Load %d %d Error"</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">)</span>
+    resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> ccproto<span class="token punctuation">.</span>Treasure_result_err_unknown
+    <span class="token keyword keyword-return">return</span>
+<span class="token punctuation">}</span>
+</code></pre><p>加载当前用户的活动数据。</p>
+</li>
+<li>
+<p><strong>活动数据初始化</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-if">if</span> actData <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token operator">||</span> actData<span class="token punctuation">.</span>Version <span class="token operator">!=</span> TreasureDataVer <span class="token punctuation">{</span>
+    actData <span class="token operator">=</span> <span class="token operator">&amp;</span>db<span class="token punctuation">.</span>DBActTreasureData<span class="token punctuation">{</span>ActId<span class="token punctuation">:</span> cur<span class="token punctuation">.</span>VId<span class="token punctuation">,</span> Uid<span class="token punctuation">:</span> msg<span class="token punctuation">.</span>User_id<span class="token punctuation">,</span> Version<span class="token punctuation">:</span> TreasureDataVer<span class="token punctuation">}</span>
+    resp<span class="token punctuation">.</span>Result <span class="token operator">=</span> treasureMgr<span class="token punctuation">.</span><span class="token function">ResetRound</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> actData<span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> <span class="token number">0</span> <span class="token operator">!=</span> resp<span class="token punctuation">.</span>Result <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>匹配检查：如果活动数据为空或版本不匹配，则初始化活动数据并重置活动轮次。</p>
+</li>
+<li>
+<p><strong>填充响应数据</strong>：</p>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>treasureMgr<span class="token punctuation">.</span><span class="token function">FillNtf</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> actData<span class="token punctuation">,</span> resp<span class="token punctuation">,</span> userinfo<span class="token punctuation">)</span>
+<span class="token keyword keyword-return">return</span>
+</code></pre><p>填充响应数据并返回。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>重置<br>
+基本同上，消息相关改为重置卡片</p>
+</li>
+<li>
+<p>开卡<br>
+基本同上，消息相关改为打开卡片<br>
+根据请求消息中的Cnt和Cost字段设置响应消息的操作类型，即：翻开1或4张，免费或用券翻开</p>
+</li>
+<li>
+<p>礼物<br>
+基本同上，消息相关改为打开礼物</p>
+</li>
+</ul>
+<h4 id="处理客户端请求-实现逻辑">处理客户端请求-实现逻辑 </h4>
+<p><code>activity/treasure_logic.go</code></p>
+<ul>
+<li>const
+<ul>
+<li><code>TreasureDataVer</code>：版本号，值为<code>db.DBActTreasureData_Ver2022070201</code>。</li>
+<li><code>TreasureDataKeepTime</code>：数据的保留时间，40天（<code>time.Second * 86400 * 40</code>）。</li>
+</ul>
+</li>
+<li>struct
+<ul>
+<li><code>actType</code>：活动类型，值为<code>conf.ActTypeTreasure</code>。</li>
+<li><code>Cur</code>：指向<code>conf.VTreasureSection</code>的切片，存储当前数据。</li>
+<li><code>lastCheck</code>：最后一次检查的时间戳。</li>
+<li><code>lock</code>：互斥锁，保护数据的一致性。</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-type">type</span> TreasureManager <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    actType <span class="token builtin">uint32</span>
+    Cur     <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">*</span>conf<span class="token punctuation">.</span>VTreasureSection
+    lastCheck <span class="token builtin">int64</span>
+    lock      sync<span class="token punctuation">.</span>Mutex
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>
+<p>获取活动配置<br>
+<code>func (p *TreasureManager) CheckCurAct() *conf.VTreasureSection</code></p>
+<ul>
+<li>匹配检查：时间戳</li>
+<li>从配置管理器<code>confMgr</code>中获取当前活动配置</li>
+</ul>
+</li>
+<li>
+<p>反序列化活动消息<br>
+<code>func (p *TreasureManager) Load(uid uint32, actId uint32) (*db.DBActTreasureData, error)</code></p>
+<ul>
+<li>从缓存管理器<code>cacheMgr</code>中获取指定用户<code>uid</code>和活动<code>actId</code>的活动数据。</li>
+<li>使用<code>proto.Unmarshal</code>将内容反序列化为<code>DBActTreasureData</code>结构体。</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>content<span class="token punctuation">,</span> err <span class="token operator">:=</span> cacheMgr<span class="token punctuation">.</span><span class="token function">GetActData</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>actType<span class="token punctuation">,</span> actId<span class="token punctuation">,</span> uid<span class="token punctuation">)</span>
+data <span class="token operator">:=</span> <span class="token operator">&amp;</span>db<span class="token punctuation">.</span>DBActTreasureData<span class="token punctuation">{</span><span class="token punctuation">}</span>
+err <span class="token operator">=</span> proto<span class="token punctuation">.</span><span class="token function">Unmarshal</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"ActData %d %d %d UnmarshalFail:%v"</span><span class="token punctuation">,</span> p<span class="token punctuation">.</span>actType<span class="token punctuation">,</span> actId<span class="token punctuation">,</span> uid<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> err
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-return">return</span> data<span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>序列化活动消息<br>
+<code>func (p *TreasureManager) Save(data *db.DBActTreasureData)</code>
+<ul>
+<li>使用<code>proto.Marshal</code>将<code>DBActTreasureData</code>结构体序列化为字节流。</li>
+<li>使用<code>cacheMgr.SetActData</code>将序列化后的数据保存到缓存中，并设置保存时间<code>TreasureDataKeepTime</code>。</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>content<span class="token punctuation">,</span> err <span class="token operator">:=</span> proto<span class="token punctuation">.</span><span class="token function">Marshal</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+err <span class="token operator">=</span> cacheMgr<span class="token punctuation">.</span><span class="token function">SetActData</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>actType<span class="token punctuation">,</span> data<span class="token punctuation">.</span>ActId<span class="token punctuation">,</span> data<span class="token punctuation">.</span>Uid<span class="token punctuation">,</span> content<span class="token punctuation">,</span> TreasureDataKeepTime<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>重置卡片<br>
+<code>func (p *TreasureManager) ResetRound(u *manager.UserState, c *conf.VTreasureSection, data *db.DBActTreasureData) (err uint32)</code>
+<ul>
+<li>延迟保存数据</li>
+<li>界限检查：活动时间，已翻开卡片数</li>
+<li>根据首轮和次轮，生成卡片</li>
+<li>增加轮次、重置打开次数、重置奖励</li>
+<li>生成规定数量的三种卡，打乱</li>
+<li>将重置操作和卡片信息记录到<code>infos</code>中，以便日志记录。</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>infos <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>infos<span class="token punctuation">,</span> <span class="token string">"reset"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-for">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> c <span class="token operator">:=</span> <span class="token keyword keyword-range">range</span> data<span class="token punctuation">.</span>Cards <span class="token punctuation">{</span>
+    infos <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>infos<span class="token punctuation">,</span> fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> c<span class="token punctuation">.</span>Card<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>打开卡片<br>
+<code>func (p *TreasureManager) OpenCard(u *manager.UserState, c *conf.VTreasureSection, data *db.DBActTreasureData, msg *ccproto.ClientTreasureOpenReq, userinfo *dbs.WxUserBrief) (err uint32)</code>
+<ul>
+<li>延迟保存数据</li>
+<li>界限检查：活动时间，已翻开卡片数</li>
+<li>索引开启单个或循环开启全部</li>
+<li>修改：记录消耗和获得道具信息</li>
+<li>RequestCall发送请求，处理响应结果</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>r<span class="token punctuation">,</span> rerr <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">GetServer</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span>SvrDbs<span class="token punctuation">,</span> service<span class="token punctuation">.</span>MySqlServer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">RequestCall</span><span class="token punctuation">(</span>warp<span class="token punctuation">,</span> time<span class="token punctuation">.</span>Second<span class="token operator">*</span><span class="token number">15</span><span class="token punctuation">)</span>
+resp<span class="token punctuation">,</span> ok <span class="token operator">:=</span> r<span class="token punctuation">.</span><span class="token function">GetPb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token operator">*</span>dbs<span class="token punctuation">.</span>DbsGoodsOptRep<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>
+<p>打开礼物<br>
+<code>func (p *TreasureManager) GetGift(u *manager.UserState, c *conf.VTreasureSection, data *db.DBActTreasureData, msg *ccproto.ClientTreasureGiftReq) (err uint32)</code><br>
+基本同上</p>
+</li>
+<li>
+<p>填充响应数据<br>
+<code>func (p *TreasureManager) FillNtf(u *manager.UserState, c *conf.VTreasureSection, data *db.DBActTreasureData, msg *ccproto.ClientTreasureNTF, userinfo *dbs.WxUserBrief)</code></p>
+<ul>
+<li>调用 <code>CanDoTreasureFree</code> 方法判断用户是否可以进行免费宝藏活动，如果可以，根据 <code>data.TimeLastFree</code> 和 <code>c.VFreeDuration</code> 计算下一次免费时间</li>
+<li>遍历 <code>data.Cards</code>，将前5个非零的卡片信息填充到 <code>msg.Items</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="rogue">rogue </h2>
+<h3 id="初始化">初始化 </h3>
+<p><code>rogue.go</code><br>
+详见<a href="#init">Init</a></p>
+<h3 id="处理客户端请求-框架-1">处理客户端请求-框架 </h3>
+<p><code>roguelike_handle.go</code></p>
+<ol>
+<li>
+<p><strong>注册响应</strong>：使用 <code>app.RegisterResponse</code> 方法注册一系列消息响应</p>
+</li>
+<li>
+<p><strong>监听消息</strong>：使用 <code>app.ListenMsg</code> 方法监听各种客户端请求的消息类型，并为每种消息类型定义了一个处理函数</p>
+</li>
+<li>
+<p><strong>处理函数</strong>：</p>
+<ul>
+<li>从会话管理器 <code>userMgr</code> 中获取用户信息</li>
+<li>使用 <code>antsMgr.PostGetUser</code> 方法异步获取用户详细信息</li>
+<li>将消息转换为具体的协议缓冲区（protobuf）消息类型</li>
+<li>调用 <code>rogueLikeMgr</code> 中的相应方法处理具体游戏逻辑</li>
+</ul>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>app<span class="token punctuation">.</span><span class="token function">ListenMsg</span><span class="token punctuation">(</span>ccproto<span class="token punctuation">.</span>CLIENT_ACT_RAND_GENERAL_POOL<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>sender ccframe<span class="token punctuation">.</span>Server<span class="token punctuation">,</span> seqId <span class="token builtin">int64</span><span class="token punctuation">,</span> _msg metanet<span class="token punctuation">.</span>Message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    user<span class="token punctuation">,</span> ok <span class="token operator">:=</span> userMgr<span class="token punctuation">.</span><span class="token function">GetSession</span><span class="token punctuation">(</span>_msg<span class="token punctuation">.</span><span class="token function">GetUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> <span class="token operator">!</span>ok <span class="token punctuation">{</span>
+        logrus<span class="token punctuation">.</span><span class="token function">Debugf</span><span class="token punctuation">(</span><span class="token string">"user[%d] not online"</span><span class="token punctuation">,</span> _msg<span class="token punctuation">.</span><span class="token function">GetUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span>
+    <span class="token punctuation">}</span>
+    antsMgr<span class="token punctuation">.</span><span class="token function">PostGetUser</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>Acc<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>t <span class="token builtin">int64</span><span class="token punctuation">,</span> userinfo <span class="token operator">*</span>dbs<span class="token punctuation">.</span>WxUserBrief<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        msg<span class="token punctuation">,</span> ok <span class="token operator">:=</span> _msg<span class="token punctuation">.</span><span class="token function">GetPb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token operator">*</span>roguelike<span class="token punctuation">.</span>ClientRogueLikeGeneralPoolRandomReq<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> <span class="token operator">!</span>ok <span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span>
+        <span class="token punctuation">}</span>
+        rogueLikeMgr<span class="token punctuation">.</span><span class="token function">RogueLikeGeneralPoolRandom</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> _msg<span class="token punctuation">.</span><span class="token function">GetOPCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> userinfo<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><h3 id="处理客户端请求-逻辑">处理客户端请求-逻辑 </h3>
+<p><code>roguelike_logic.go</code></p>
+<ul>
+<li>struct</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-type">type</span> RogueLikeManager <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    actType <span class="token builtin">uint32</span>
+
+    lastCheck <span class="token builtin">int64</span>
+    lock      sync<span class="token punctuation">.</span>Mutex
+<span class="token punctuation">}</span>
+</code></pre><pre class="language-text">- `actType`存储活动的类型
+- `lastCheck`记录最后一次检查活动的时间戳
+- `lock`互斥锁
+</pre>
+<ul>
+<li>
+<p>检查赛季ID<br>
+<code>func (p *RogueLikeManager) CheckCurAct(seasonId uint32) uint32</code></p>
+<ul>
+<li>从<code>confMgr</code>获取游戏配置</li>
+<li>从<code>gameConf.RogueConf</code>中获取与<code>seasonId</code>对应的轮次ID信息</li>
+</ul>
+</li>
+<li>
+<p>从DBS将池发将</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>空检查</strong>：通过<code>CheckCurAct</code>函数检查当前赛季信息，从配置管理器<code>confMgr</code>获取赛季和回合的配置信息</p>
+</li>
+<li>
+<p><strong>用户活动数据锁</strong>：尝试获取用户活动数据的锁，以防止并发写入</p>
+</li>
+<li>
+<p><strong>请求玩家活动数据</strong>：向数据库服务请求玩家的活动数据，包括赛季数据、武将池数据、游戏数据和历史数据，然后处理响应</p>
+</li>
+<li>
+<p><strong>匹配检查</strong>：</p>
+<ul>
+<li>检查玩家的体力值</li>
+<li>检查请求的赛季ID是否与玩家当前赛季ID一致</li>
+<li>检查玩家是否已经有武将</li>
+<li>检查武将池数据是否需要刷新，如果不需要，则直接返回旧数据</li>
+</ul>
+</li>
+<li>
+<p><strong>获取武将池数据</strong>：向数据库服务请求新的武将池数据，如果请求失败，则设置错误码并返回</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>reqPool <span class="token operator">:=</span> <span class="token operator">&amp;</span>roguelike<span class="token punctuation">.</span>RogueLikeGeneralPoolRandomReq<span class="token punctuation">{</span>SeasonId<span class="token punctuation">:</span> msg<span class="token punctuation">.</span>SeasonId<span class="token punctuation">,</span> ChangeGenId<span class="token punctuation">:</span> cfgSeasonNode<span class="token punctuation">.</span>IsChange<span class="token punctuation">}</span>
+wrapPool <span class="token operator">:=</span> <span class="token operator">&amp;</span>metanet<span class="token punctuation">.</span>PbMessage<span class="token punctuation">{</span>
+    Pb<span class="token punctuation">:</span> reqPool<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+wrapPool<span class="token punctuation">.</span>User_id <span class="token operator">=</span> u<span class="token punctuation">.</span>Uid
+rPool<span class="token punctuation">,</span> dbPoolErr <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">GetServer</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span>SvrDbs<span class="token punctuation">,</span> service<span class="token punctuation">.</span>MySqlServer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">RequestCall</span><span class="token punctuation">(</span>wrapPool<span class="token punctuation">,</span> time<span class="token punctuation">.</span>Second<span class="token operator">*</span><span class="token number">15</span><span class="token punctuation">)</span>
+</code></pre><ol start="6">
+<li><strong>数据修改和写回</strong>：修改玩家数据，并将新的武将池数据写回数据库</li>
+<li><strong>通知客户端</strong>：向客户端发送新的武将池数据</li>
+</ol>
+<ul>
+<li>
+<p>数据接口<br>
+<code>roguelike_data.go</code><br>
+肉鸽数据通用操作接口，方便复用</p>
+</li>
+<li>
+<p>用户消息处理<br>
+<code>user_handles.go</code><br>
+初始化用户消息处理器<br>
+注册消息监听器，当接收到特定类型的消息时，会调用相应的回调函数</p>
+</li>
+</ul>
+<h1 id="2-开发流程">2. 开发流程 </h1>
+<h2 id="协议-go">协议-go </h2>
+<p>例：<code>treasure</code></p>
+<h3 id="协议定义与使用">协议定义与使用 </h3>
+<ol>
+<li><strong>定义协议结构体</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-type">type</span> PacketBase <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    OPCode  <span class="token builtin">uint32</span> <span class="token comment">//操作类别</span>
+    Len     <span class="token builtin">uint32</span> <span class="token comment">//整个消息包长度</span>
+    User_id <span class="token builtin">uint32</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-type">type</span> ClientTreasureNTF <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    metanet<span class="token punctuation">.</span>PacketBase
+    Id             <span class="token builtin">uint32</span>
+    Cost1          <span class="token builtin">uint32</span>                       <span class="token comment">//单抽消耗</span>
+    Cost5          <span class="token builtin">uint32</span>                       <span class="token comment">//5抽消耗</span>
+    Gift_geted     <span class="token builtin">uint8</span>                        <span class="token comment">//是否领取免费道具 0:无 1:已领取</span>
+    Time_next_free <span class="token builtin">uint32</span>                       <span class="token comment">//0值是没有免费开 非0值时大于该时间可免费</span>
+    Open5_get      <span class="token builtin">uint32</span>                       <span class="token comment">//开了5个的奖励分</span>
+    Op             <span class="token builtin">uint8</span>                        <span class="token comment">//对应操作类型</span>
+    Result         <span class="token builtin">uint32</span>                       <span class="token comment">//对应操作结果</span>
+    Items          <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span>TClientTreasureNTFOneItem <span class="token comment">//5张牌数据</span>
+<span class="token punctuation">}</span>
+</code></pre><ol start="2">
+<li><strong>添加操作码枚举</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-const">const</span> <span class="token punctuation">(</span>
+    Treasure_op_req     <span class="token operator">=</span> <span class="token number">0</span>
+    Treasure_op_reset   <span class="token operator">=</span> <span class="token number">1</span>
+    Treasure_op_getfree <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">)</span>
+</code></pre><ol start="3">
+<li><strong>处理函数中填充协议字段，发送消息</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>app<span class="token punctuation">.</span><span class="token function">ListenMsg</span><span class="token punctuation">(</span>ccproto<span class="token punctuation">.</span>CLIENT_TREASURE_INFO_RESET<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>sender ccframe<span class="token punctuation">.</span>Server<span class="token punctuation">,</span> seqId <span class="token builtin">int64</span><span class="token punctuation">,</span> _msg metanet<span class="token punctuation">.</span>Message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    resp <span class="token operator">:=</span> <span class="token operator">&amp;</span>ccproto<span class="token punctuation">.</span>ClientTreasureNTF<span class="token punctuation">{</span><span class="token punctuation">}</span>
+    resp<span class="token punctuation">.</span>User_id <span class="token operator">=</span> msg<span class="token punctuation">.</span>User_id
+    resp<span class="token punctuation">.</span>Op <span class="token operator">=</span> ccproto<span class="token punctuation">.</span>Treasure_op_reset
+    <span class="token keyword keyword-defer">defer</span> sender<span class="token punctuation">.</span><span class="token function">SendMsg</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="协议定义与使用-pb">协议定义与使用-pb </h3>
+<ol>
+<li><strong>定义协议结构体</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-type">type</span> PacketBaseV2 <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    PacketBase
+    MsgType <span class="token builtin">uint8</span>
+    SeqId   <span class="token builtin">int64</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-type">type</span> PbMessage <span class="token keyword keyword-struct">struct</span> <span class="token punctuation">{</span>
+    PacketBaseV2
+    Pb proto<span class="token punctuation">.</span>Message
+<span class="token punctuation">}</span>
+</code></pre><ol start="2">
+<li><strong>处理函数中填充协议字段，对服务进行请求调用</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>treasure_logic<span class="token punctuation">.</span><span class="token keyword keyword-go">go</span>
+warp <span class="token operator">:=</span> <span class="token operator">&amp;</span>metanet<span class="token punctuation">.</span>PbMessage<span class="token punctuation">{</span>
+    Pb<span class="token punctuation">:</span> req<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+warp<span class="token punctuation">.</span>User_id <span class="token operator">=</span> u<span class="token punctuation">.</span>Uid
+r<span class="token punctuation">,</span> rerr <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">GetServer</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span>SvrDbs<span class="token punctuation">,</span> service<span class="token punctuation">.</span>MySqlServer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">RequestCall</span><span class="token punctuation">(</span>warp<span class="token punctuation">,</span> time<span class="token punctuation">.</span>Second<span class="token operator">*</span><span class="token number">15</span><span class="token punctuation">)</span>
+</code></pre><h3 id="协议实现">协议实现 </h3>
+<ol>
+<li><strong>添加操作码枚举</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token string">`msgid.go`</span>
+<span class="token keyword keyword-const">const</span> <span class="token punctuation">(</span>
+    CLIENT_SGS_PROTOCOL_BEGIN <span class="token operator">=</span> <span class="token number">20000</span> <span class="token operator">+</span> <span class="token boolean">iota</span> <span class="token comment">//协议分段</span>
+    SELF_CS_ReportNetType                <span class="token comment">//服务器自己到中心服务器注册自己的服务类型</span>
+    CS_Notice_NewServerStartUp           <span class="token comment">//cs通知别的服务器有新的服务器启动</span>
+    SERVER_TOSERVER_ALIVE_SELFSTRESS_RPT <span class="token comment">//服务器向中心服务器报告自己的参数</span>
+    DBS_TOCS_USERS_OFFLINE_RPT           <span class="token comment">//DBS向中心服务器报告物理下线的用户</span>
+    SS_CS_SELF_FAULT_RPT                 <span class="token comment">//向cs报告我的故障，我该如何处理</span>
+    CS_SS_FAULT_DEALWITH_NTF             <span class="token comment">//cs通知我如何处理故障</span>
+    SS_SS_MYUSING_SERVERID_NTF           <span class="token comment">//我使用的服务器</span>
+</code></pre><ol start="2">
+<li><strong>注册</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>register_game<span class="token punctuation">.</span><span class="token keyword keyword-go">go</span>
+metanet<span class="token punctuation">.</span><span class="token function">RegisterMessage</span><span class="token punctuation">(</span>SS_SS_MYUSING_SERVERID_NTF<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">*</span>SSSS_MeUsingServeridNtf<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token boolean">nil</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><ol start="3">
+<li><strong>监听</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>gs_msg_dbserver<span class="token punctuation">.</span><span class="token keyword keyword-go">go</span>
+app<span class="token punctuation">.</span><span class="token function">ListenMsg</span><span class="token punctuation">(</span>ccproto<span class="token punctuation">.</span>SS_SS_MYUSING_SERVERID_NTF<span class="token punctuation">,</span> <span class="token keyword keyword-func">func</span><span class="token punctuation">(</span>sender ccframe<span class="token punctuation">.</span>Server<span class="token punctuation">,</span> seqId <span class="token builtin">int64</span><span class="token punctuation">,</span> msg metanet<span class="token punctuation">.</span>Message<span class="token punctuation">)</span>
+</code></pre><h2 id="配置-go">配置-go </h2>
+<h3 id="加载管理">加载管理 </h3>
+<p><code>conf_manager.go</code><br>
+加载和重载配置文件，提供线程安全的访问和修改配置的方法。通过回调函数通知配置加载完成，并使用读写锁来保护配置的并发访问</p>
+<ul>
+<li>
+<p>ConfManager</p>
+<ul>
+<li><code>app</code>: 指向ccframe框架的Application实例。</li>
+<li><code>Paths</code>: 配置文件路径。</li>
+<li><code>Develop</code>: 是否处于开发模式。</li>
+<li><code>loadCallback</code>: 配置加载完成后的回调函数。</li>
+<li><code>confLock</code>: 读写锁，用于保护配置的并发访问。</li>
+<li><code>gameConf</code>: 当前加载的游戏配置。</li>
+</ul>
+</li>
+<li>
+<p>加载配置<br>
+调用<code>gameconfig.go</code>的<code>Load</code>方法加载配置文件</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>GameConfig<span class="token punctuation">)</span> <span class="token function">Load</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+t <span class="token operator">:=</span> reflect<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Elem</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-for">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> t<span class="token punctuation">.</span><span class="token function">NumField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fieldinfo <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    filename <span class="token operator">:=</span> fieldinfo<span class="token punctuation">.</span>Tag<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> p<span class="token punctuation">.</span><span class="token function">IsSet</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp <span class="token operator">:=</span> t<span class="token punctuation">.</span><span class="token function">Field</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Interface</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        cfg<span class="token punctuation">,</span> ok <span class="token operator">:=</span> tmp<span class="token punctuation">.</span><span class="token punctuation">(</span>ConfigBase<span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> ok <span class="token punctuation">{</span>
+            result <span class="token operator">:=</span> cfg<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>CfgPath<span class="token punctuation">,</span> <span class="token string">"xmlconfig/"</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-if">if</span> result <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-return">return</span> fmt<span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"load %s fail:%v"</span><span class="token punctuation">,</span> filename<span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-return">return</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>重载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">ReloadXml</span><span class="token punctuation">(</span>vctResult <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> pmsg <span class="token operator">*</span>ccproto<span class="token punctuation">.</span>SSSS_GmCmdNtf<span class="token punctuation">,</span> app <span class="token operator">*</span>ccframe<span class="token punctuation">.</span>Application<span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>根据传入的命令参数重新加载配置文件。如果命令是<code>config all</code>，则重新加载所有配置文件；如果是其他命令，则只重新加载指定的配置文件。</p>
+<ul>
+<li>获取配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token keyword keyword-func">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConfManager<span class="token punctuation">)</span> <span class="token function">GetConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>conf<span class="token punctuation">.</span>GameConfig <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><p>返回当前加载的游戏配置。</p>
+<h3 id="使用实现">使用实现 </h3>
+<ul>
+<li><code>Init</code>初始化加载配置</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code><span class="token boolean">_</span><span class="token punctuation">,</span> err <span class="token operator">=</span> confMgr<span class="token punctuation">.</span><span class="token function">LoadConf</span><span class="token punctuation">(</span><span class="token string">"character.xml"</span><span class="token punctuation">,</span> <span class="token string">"hd_roguelike.xml"</span><span class="token punctuation">,</span> <span class="token string">"cha_spell.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"ff_dbs_pay_gift.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_ss_gamelabel_config.xml"</span><span class="token punctuation">,</span> <span class="token string">"sys_h5_task_main.xml"</span><span class="token punctuation">,</span>
+    <span class="token string">"hd_all_active.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_global_conf.xml"</span><span class="token punctuation">,</span> <span class="token string">"h5_bar_control.xml"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    logrus<span class="token punctuation">.</span><span class="token function">WithError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">"LoadConf"</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> err
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>命令行<br>
+根据输入使用<code>path.Join</code>更改路径</li>
+</ul>
+<pre data-role="codeBlock" data-info="go" class="language-go go"><code>flag<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-if">if</span> <span class="token operator">*</span>csConfig <span class="token operator">==</span> <span class="token string">"cs_config.ini"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span>csConfig <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span><span class="token operator">*</span>app_conf_path<span class="token punctuation">,</span> <span class="token operator">*</span>csConfig<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="协议-cpp">协议-cpp </h2>
+<h3 id="协议定义与使用-1">协议定义与使用 </h3>
+<p>例：<code>DBS_GS_COMPLETE_ACH_NOTICE</code></p>
+<ol>
+<li><strong>定义协议结构体,实现协议构造函数</strong>
+<ul>
+<li>创建一个新的结构体来表示协议数据，继承自<code>PacketBase</code>，包含所有必要的字段。</li>
+<li>初始化列表中设置操作码（<code>OPCode</code>）和结构体大小（<code>sizeof</code>）。</li>
+<li>在新结构体中实现构造函数，初始化所有成员变量。</li>
+</ul>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-struct">struct</span> <span class="token class-name">PacketBase</span>
+<span class="token punctuation">{</span>
+	<span class="token function">PacketBase</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> opcode<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> len<span class="token punctuation">)</span><span class="token operator">:</span><span class="token function">OPCode</span><span class="token punctuation">(</span>opcode<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">Len</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">user_id</span><span class="token punctuation">(</span>sc_invalid_user_temp_id<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> OPCode<span class="token punctuation">;</span>          <span class="token comment">//操作类别  </span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> Len<span class="token punctuation">;</span>             <span class="token comment">//整个消息包长度</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> user_id<span class="token punctuation">;</span>         <span class="token comment">//modify by zht</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//服务器之间通知,战功完成</span>
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">DbsGsCompleteAchNotice</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token class-name">PacketBase</span></span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-char">char</span> szAccount<span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-short">short</span> uAchId<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span>   uCompleteTime<span class="token punctuation">;</span>
+	<span class="token function">DbsGsCompleteAchNotice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">PacketBase</span><span class="token punctuation">(</span>DBS_GS_COMPLETE_ACH_NOTICE<span class="token punctuation">,</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>DbsGsCompleteAchNotice<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token function">memset</span><span class="token punctuation">(</span>szAccount<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>szAccount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		uAchId <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		uCompleteTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><ol start="2">
+<li><strong>添加操作码枚举</strong></li>
+</ol>
+<ul>
+<li>在<code>OPCode</code>枚举中添加新的操作码，确保其唯一性。</li>
+</ul>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-enum">enum</span> <span class="token class-name">OPCode</span>
+<span class="token punctuation">{</span>
+DBS_GS_COMPLETE_ACH_NOTICE<span class="token punctuation">,</span> <span class="token comment">//Dbs通知GS战功完成</span>
+<span class="token punctuation">}</span>
+</code></pre><ol start="3">
+<li><strong>处理函数中添加case分支,实现协议逻辑</strong>：
+<ul>
+<li>在消息处理函数（如<code>hand_msg_dbserver</code>）中添加<code>case</code>分支</li>
+<li>在<code>case</code>分支中实现具体的业务逻辑，如解析协议数据、调用相关函数等。</li>
+</ul>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-bool">bool</span> <span class="token class-name">CGsNetMg</span><span class="token double-colon punctuation">::</span><span class="token function">hand_msg_dbserver</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> conid<span class="token punctuation">,</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-void">void</span> <span class="token operator">*</span>pData<span class="token punctuation">,</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> data_len<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token keyword keyword-case">case</span>  DBS_GS_COMPLETE_ACH_NOTICE<span class="token operator">:</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-const">const</span> DbsGsCompleteAchNotice <span class="token operator">*</span>pMsg <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> DbsGsCompleteAchNotice <span class="token operator">*</span><span class="token punctuation">)</span>pMsgHeader<span class="token punctuation">;</span>
+        CGsUser <span class="token operator">*</span>pUser <span class="token operator">=</span> <span class="token class-name">CUserMg</span><span class="token double-colon punctuation">::</span><span class="token function">Single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Find</span><span class="token punctuation">(</span> pMsgHeader<span class="token operator">-&gt;</span>user_id <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span> pUser <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            pUser<span class="token operator">-&gt;</span><span class="token function">GetAchievement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">NetMsgDbsGsCompleteAchNotice</span><span class="token punctuation">(</span>pMsg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="协议定义与使用-pb-1">协议定义与使用-pb </h3>
+<ol>
+<li><strong>定义协议结构体,实现协议构造函数</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-struct">struct</span> <span class="token class-name">PacketBaseV2</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">PacketBase</span></span>
+<span class="token punctuation">{</span>
+	UINT8 MsgType<span class="token punctuation">;</span>      <span class="token comment">//消息类型区分pb还是结构体	</span>
+	UINT64 SeqId<span class="token punctuation">;</span>       <span class="token comment">//Request请求使用 唯一ID，用于管理Request请求，定位回调等 </span>
+	<span class="token function">PacketBaseV2</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> opcode<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> len<span class="token punctuation">,</span> UINT8 msgType <span class="token operator">=</span> em_msg_type_struct<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token function">PacketBase</span><span class="token punctuation">(</span>opcode<span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">MsgType</span><span class="token punctuation">(</span>msgType<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">SeqId</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">PbWarpMsg</span> <span class="token operator">:</span><span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">PacketBaseV2</span></span>
+<span class="token punctuation">{</span>
+	<span class="token function">PbWarpMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span><span class="token function">PacketBaseV2</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><ol start="2">
+<li><strong>处理函数中填充协议字段，序列化处理并发送</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>PbWarpMsg <span class="token operator">*</span>pTempMsg <span class="token operator">=</span> <span class="token punctuation">(</span>PbWarpMsg<span class="token operator">*</span><span class="token punctuation">)</span><span class="token class-name">CSgsAllocXBlockMg</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span> <span class="token operator">+</span> pbLen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+CAutoCallFun <span class="token function">autocb</span><span class="token punctuation">(</span>boost<span class="token double-colon punctuation">::</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>CSgsAllocXBlockMg<span class="token double-colon punctuation">::</span>free<span class="token punctuation">,</span> <span class="token class-name">CSgsAllocXBlockMg</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword keyword-char">char</span><span class="token operator">*</span><span class="token punctuation">)</span>pTempMsg<span class="token punctuation">,</span> <span class="token number">43508</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+pTempMsg<span class="token operator">-&gt;</span>OPCode <span class="token operator">=</span> QUERY_USER_ID_RSP<span class="token punctuation">;</span>
+pTempMsg<span class="token operator">-&gt;</span>user_id <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>uid<span class="token punctuation">;</span>
+pTempMsg<span class="token operator">-&gt;</span>Len <span class="token operator">=</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span> <span class="token operator">+</span> pbLen<span class="token punctuation">;</span>
+pTempMsg<span class="token operator">-&gt;</span>MsgType <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+pTempMsg<span class="token operator">-&gt;</span>SeqId <span class="token operator">=</span> SeqId<span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>msg<span class="token punctuation">.</span><span class="token function">SerializePartialToArray</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>pTempMsg<span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PbWarpMsg<span class="token punctuation">)</span><span class="token punctuation">,</span> pbLen<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">INiceNet</span><span class="token double-colon punctuation">::</span><span class="token function">Instance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SendMsg</span><span class="token punctuation">(</span>con_id<span class="token punctuation">,</span> pTempMsg<span class="token punctuation">,</span> pTempMsg<span class="token operator">-&gt;</span>Len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="协议类型处理">协议类型处理 </h3>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-void">void</span> <span class="token class-name">ReplayRecordMgr</span><span class="token double-colon punctuation">::</span><span class="token function">WritePacketData</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> PacketBase<span class="token operator">*</span> pMsg<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>
+<p>协议转换<br>
+检查是否有消息适配器：通过 <code>CNetMsgAdapter::single().HasMsgAdapter(pMsg-&gt;OPCode)</code> 检查当前消息是否有适配器。如果有适配器，尝试将消息适配到 <code>m_adapterbuf</code> 缓冲区中。适配成功后，将 <code>new_msg</code> 指向适配后的消息。</p>
+</li>
+<li>
+<p>写入操作<br>
+根据消息的 <code>OPCode</code> 判断消息类型：</p>
+<ol>
+<li><strong>PB消息</strong>：如果 <code>OPCode</code> 大于 <code>PACKET_V2_BEGIN</code>，表示这是一个 PB 消息。</li>
+</ol>
+<ul>
+<li>长度检查：检查消息长度是否在合理范围内。如果不在，记录错误日志并返回。</li>
+<li>写入消息：将消息的各个字段写入记录，包括消息 ID、扩展数据、消息版本号、消息类型、序列 ID、消息长度和消息内容。</li>
+</ul>
+<ol start="2">
+<li><strong>结构体消息</strong>：如果 <code>OPCode</code> 小于等于 <code>PACKET_V2_BEGIN</code>，表示这是一个结构体消息。</li>
+</ol>
+<ul>
+<li>写入消息：将消息的各个字段写入记录，包括消息 ID、扩展数据、消息版本号、消息长度和消息内容。</li>
+</ul>
+</li>
+<li>
+<p>安全检查</p>
+<ol>
+<li><strong>转换结果检查</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">CNetMsgAdapter</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">AdaptMsg</span><span class="token punctuation">(</span>pMsg<span class="token punctuation">,</span> m_adapterbuf<span class="token punctuation">,</span> <span class="token number">40960</span><span class="token punctuation">,</span> sc_sgs_curversion<span class="token punctuation">,</span> use_buf<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>检查消息转换是否成功，记录错误日志并返回。</li>
+</ul>
+<ol start="2">
+<li><strong>协议版本检查</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>new_msg<span class="token operator">-&gt;</span>OPCode <span class="token operator">&gt;</span> PACKET_V2_BEGIN<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>检查操作码是否大于<code>PACKET_V2_BEGIN</code>，即是否为PB协议版本的消息。</li>
+</ul>
+<ol start="3">
+<li><strong>消息长度检查</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>new_msg<span class="token operator">-&gt;</span>Len <span class="token operator">&lt;</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>PacketBaseV2<span class="token punctuation">)</span> <span class="token operator">||</span> new_msg<span class="token operator">-&gt;</span>Len <span class="token operator">&gt;</span> m_max_protocol_len<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>检查消息长度是否在合法范围内，记录错误日志并返回。</li>
+</ul>
+<ol start="4">
+<li><strong>指针转换检查</strong>：</li>
+</ol>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-const">const</span> PacketBaseV2<span class="token operator">*</span> pMsgV2 <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword keyword-const">const</span> PacketBaseV2<span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>new_msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pMsgV2<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>尝试将<code>new_msg</code>转换为<code>PacketBaseV2</code>类型，并检查转换后的指针是否为空，记录错误日志并返回。</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置-cpp">配置-cpp </h2>
+<h3 id="加载管理-1">加载管理 </h3>
+<p>例：<code>GeneralTrialConfig</code><br>
+武将试炼配置。采用单例模式，通过读取XML文件来加载配置数据，提供一系列的接口来获取配置数据</p>
+<ul>
+<li>load函数<br>
+从XML文件中加载配置数据。首先获取配置文件的路径，使用<code>path +=""</code>更改路径，然后使用TinyXML库解析XML文件。解析过程中，会根据不同的XML节点调用相应的加载函数</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-bool">bool</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>配置加载函数<br>
+负责解析XML文件中的特定节点，并存储在相应的数据结构中</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-bool">bool</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">LoadCommonCfg</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> TiXmlElement<span class="token operator">&amp;</span> rElement<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>配置数据访问函数<br>
+用于访问加载后的配置数据（如<code>GetBaseCompleteList</code>、<code>GetRefreshNode</code>等）</li>
+</ul>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-const">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>GeneralTrialConfig<span class="token double-colon punctuation">::</span>BaseCompleteNode<span class="token operator">&gt;</span><span class="token operator">&amp;</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">GetBaseCompleteList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> m_base_complete_list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="使用实现-1">使用实现 </h3>
+<p>使用<code>m_data.getGeneralTrialData()</code>获取当前活动的体力数据，存储在<code>p_pbTrialData</code>中</p>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-auto">auto</span> rCommonCfg <span class="token operator">=</span> <span class="token class-name">GeneralTrialConfig</span><span class="token double-colon punctuation">::</span><span class="token function">single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">GetCommonData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> uAddValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>pbTrialData<span class="token punctuation">.</span><span class="token function">valuetimerefresh</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    uAddValue <span class="token operator">=</span> rCommonCfg<span class="token punctuation">.</span>uDailyRenew<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h1 id="3-jira武将文档">3. jira武将文档 </h1>
+<h2 id="海坊主boss">海坊主BOSS </h2>
+<h3 id="暴雨">暴雨 </h3>
+<p>锁定技，防止你受到的火焰伤害；每轮开始时，对所有其他角色造成1点伤害。</p>
+<ul>
+<li>声明头文件<br>
+枚举：当前效果<br>
+枚举：对所有其他角色造成伤害流程状态</li>
+<li>常量定义</li>
+<li>注册技能<br>
+REGISTER_TRIGGER_SPELL</li>
+<li>CanTriggerMe<br>
+空检查：游戏,角色,技能数据<br>
+匹配检查：受到伤害时Opp_when_hurt_2<br>
+匹配检查：火焰属性Property_fire<br>
+匹配检查：新一轮Opp_before_phase_start</li>
+<li>CanCast<br>
+若为锁定技，恒True</li>
+<li>Resolve</li>
+</ul>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>step_begin <span class="token operator">=</span> <span class="token number">0</span><span class="token comment">//源动作转换为 `CDamageAction` 类型，获取座位id数组</span>
+step_damage<span class="token comment">//对目标角色造成伤害</span>
+step_end<span class="token comment">//设置结束标记</span>
+</code></pre><ul>
+<li>Data</li>
+</ul>
+<h2 id="无名boss">无名BOSS </h2>
+<h3 id="列阵">列阵 </h3>
+<p>锁定技，奇数轮次中你视为装备着【仁王盾】，偶数轮次中你视为装备着【八卦阵】。</p>
+<ul>
+<li>声明头文件<br>
+枚举：当前防具<br>
+枚举：八卦技能注册流程状态</li>
+<li>常量定义</li>
+<li>注册技能<br>
+REGISTER_TRIGGER_SPELL</li>
+<li>CanTriggerMe<br>
+空检查：游戏,角色,技能数据<br>
+匹配检查：防具生效前的时机Opp_before_shan_bagua<br>
+判断轮数奇偶</li>
+<li>CanCast<br>
+若为锁定技，恒True</li>
+<li>Resolve<br>
+注册对应防具技能，八卦恒发动</li>
+<li>Data</li>
+</ul>
+<h2 id="王昶">王昶 </h2>
+<h3 id="开济">开济 </h3>
+<p>出牌阶段限一次，你可以令一名本轮未以此法指定过的角色弃置你一张手牌，然后你可以使用弃置的牌，若如此做，你摸一张牌。</p>
+<ul>
+<li>声明头文件<br>
+枚举：弃牌用牌等待流程</li>
+<li>常量定义</li>
+<li>注册技能<br>
+REGISTER_TRIGGER_SPELL</li>
+<li>CanTriggerMe<br>
+若为无条件时机技能，恒True</li>
+<li>CanCast<br>
+空检查：游戏,角色,技能数据<br>
+界限检查：使用次数</li>
+<li>Resolve<br>
+空检查：游戏,角色,技能数据<br>
+通用询问操作OPT_COMMON_1<br>
+匹配检查：牌是否可用</li>
+<li>Data<br>
+中流刷新</li>
+<li>State</li>
+<li>TimeOutCallBack</li>
+</ul>
+<h2 id="王匡">王匡 </h2>
+<h3 id="任侠">任侠 </h3>
+<p>出牌阶段限一次，你可以执行一项，并于此阶段结束时执行另一项：1.弃置两张牌，重复至手牌中没有【杀】或伤害锦囊；2.摸两张牌，重复至手牌中有【杀】或伤害锦囊。</p>
+<ul>
+<li>声明头文件<br>
+REGISTER_TRIGGER_SPELL</li>
+<li>常量定义<br>
+opt_card_num = 2//操作牌数</li>
+<li>注册技能<br>
+REGISTER_TRIGGER_SPELL</li>
+<li>CanTriggerMe<br>
+出牌阶段开始，主动使用<br>
+空检查：游戏,角色,技能数据<br>
+若为无条件时机技能，恒True</li>
+<li>CanCast<br>
+出牌阶段结束，被动触发<br>
+空检查：游戏,角色,技能数据<br>
+匹配检查：出牌阶段结束时，使用过技能，选项标记正确<br>
+修改：pParam-&gt;bLocked，pParam-&gt;uTriggerIndex</li>
+<li>Resolve<br>
+空检查：游戏,角色,技能数据</li>
+</ul>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code>step_begin <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//效果-先</span>
+step_play_end_begin<span class="token punctuation">,</span><span class="token comment">//效果-后</span>
+step_check_deal<span class="token punctuation">,</span><span class="token comment">//是否继续摸牌</span>
+step_check_discard<span class="token punctuation">,</span><span class="token comment">//是否继续弃牌</span>
+step_notify_sel_card<span class="token punctuation">,</span>
+step_wait_sel_card<span class="token punctuation">,</span>
+step_deal_card<span class="token punctuation">,</span>
+step_discard<span class="token punctuation">,</span>
+step_end<span class="token punctuation">,</span>
+</code></pre><ul>
+<li>Data<br>
+出牌阶段结束重置技能<br>
+记录第一次的选项序号</li>
+</ul>
+<h1 id="4-go聊天室实现">4. go聊天室实现 </h1>
+<ul>
+<li>新增逻辑：定时广播在线用户</li>
+<li>新增逻辑：重复登录相同账号处理</li>
+</ul>
+<p><img src="file:///d:\company\Online\绩效\241025新人培养计划 - 服务器 - 文家宝 - 第4周工作总结\QQ%E6%88%AA%E5%9B%BE20241108143614.png" alt="alt text"></p>
+
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+  </html>

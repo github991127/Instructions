@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0" version="24.7.17">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1810" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-0" value="DBS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="540" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-59" value="DBS接收到登录消息后，加载用户数据。完成用户数据的初始化。通过CS通知其他相关服务（如FriendServer）用户的状态变化。&#xa;DBS完成用户数据初始化和通知其他服务后，返回登录成功消息给GateWay。" style="text;whiteSpace=wrap;fontSize=9;" vertex="1" parent="GLdnbfGG6QxVi_6-yVyp-0">
+          <mxGeometry x="10" y="20" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-1" value="MySQL" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="540" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-2" value="Client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="108.5" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-3" value="GateWay" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="80" y="540" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-56" value="接收登录协议并转发给LoginServer。如果验证成功，GateWay需要根据固定hash的方法，将用户分配到特定的DBS上。将登录消息发送到计算出的特定DBS。&#xa;GateWay接收到来自DBS的登录成功消息后，将结果const void *返回给客户端。" style="text;whiteSpace=wrap;fontSize=9;" vertex="1" parent="GLdnbfGG6QxVi_6-yVyp-3">
+          <mxGeometry x="15" y="20" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-4" value="CenterServer" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="320" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-58" value="负责管理全局服务连接状态并提供中转。建立与其他服务器的连接，解析指向的结构体，获取服务器的IP地址和端口号等信息。" style="text;whiteSpace=wrap;fontSize=9;" vertex="1" parent="GLdnbfGG6QxVi_6-yVyp-4">
+          <mxGeometry x="10" y="20" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-5" value="LoginServer" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="80" y="320" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-57" value="通过HTTP请求发送到后台验证服务，接收到验证结果后，将结果返回给GateWay。" style="text;whiteSpace=wrap;fontSize=9;" vertex="1" parent="GLdnbfGG6QxVi_6-yVyp-5">
+          <mxGeometry x="15" y="20" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-16" value="CLIENT_LOGIN_REQ" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="690" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-21" value="" style="shape=crossbar;whiteSpace=wrap;html=1;rounded=1;direction=south;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="590" y="670" width="20" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-27" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=-90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="128.5" y="480" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-29" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="140" y="480" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-30" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=-90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="480" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-31" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="571.5" y="480" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-34" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=-90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="128.5" y="700" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-35" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=90;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="140" y="700" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-37" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="580" width="177" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-38" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.0903954802259887;rotation=-180;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="600" width="177" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-39" value="CLIENT_LOGIN_GTTOCS_REQ" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-20" y="480" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-40" value="LS_GT_USER_LOGIN_RESULT" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="190" y="480" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-41" value="CLIENT_LOGIN_REP" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="190" y="690" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-42" value="CLIENT_LOGIN_GTTOCS_REQ" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="530" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-43" value="CS_GT_USER_LOGIN_FIRST_REP" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="620" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-44" value="SS_TO_DBS_USERBASEINFO_REQ" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="285" y="550" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-45" value="DBS_GSCS_ACTIVITY_DATA_SYN" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="465" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-46" value="SS_TO_DBS_USERBASEINFO_REQ" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="620" y="465" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-47" value="DBS_TO_CS_USERBASEINFO_REP" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="490" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GLdnbfGG6QxVi_6-yVyp-48" value="SS_SS_GM_CMD_NTF" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="620" y="490" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
