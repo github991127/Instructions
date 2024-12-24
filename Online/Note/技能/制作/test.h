@@ -10,18 +10,19 @@ SKILL_ROGUELIKE_YAO_LI_JING_TONG2 = 13180, //药理精通·贰
 SKILL_CHARACTER_SFMATCH_FEI_YANG = 21071
 
 - TEST✔️❎
-玩家：13179；13180；13314；13315；13316；13317
+玩家：14197 冲阵；37	龙胆
 对手：
 
-回复体力4次-OK✔
-回合外回复体力-OK✔
-下回合回复体力-OK✔
+超时-拿2，不足拿全部✔️
+
+使用转化杀-拿2✔️
+使用转化闪-拿2✔️
 
 ——————————————————————
-
-
+CardIdList&
+PPlayCardList&
 CZoneBase
 
-
+GetZoneType()
 
 
