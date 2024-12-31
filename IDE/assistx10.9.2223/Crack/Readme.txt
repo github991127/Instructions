@@ -1,4 +1,7 @@
-﻿INSTALLATION
+﻿C:\Users\wenjiabao\AppData\Local\Microsoft\VisualStudio\12.0\Extensions
+
+
+INSTALLATION
 
 0) Uninstall VA (if you have installed it before).
 0.0) Manually check for alive _folders_ of pervious version of VA in extensions folders (paths are described
